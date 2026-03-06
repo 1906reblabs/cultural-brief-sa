@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Cultural Brief (SA)</title>
+  <meta name="description" content="A deliberately scarce South African cultural newsletter. One edition, every Thursday. Curated with editorial judgment, never algorithms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #1a1714;
+      --paper: #f5f2ec;
+      --muted: #7a7167;
+      --rule: #c9c3b8;
+      --accent: #2c2c2c;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 18px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- NOISE TEXTURE OVERLAY ---- */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    /* ---- MASTHEAD ---- */
+    .masthead {
+      border-bottom: 3px double var(--ink);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      position: relative;
+      animation: fadeDown 0.9s ease both;
+    }
+
+    .masthead-eyebrow {
+      font-family: 'EB Garamond', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .masthead h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .masthead h1 em {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .masthead-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.4rem 0 1.2rem;
+    }
+
+    .masthead-rule span {
+      display: block;
+      height: 1px;
+      width: 80px;
+      background: var(--rule);
+    }
+
+    .masthead-rule .ornament {
+      width: auto;
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+    }
+
+    .masthead-tagline {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .masthead-meta {
+      margin-top: 1.6rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ---- LAYOUT ---- */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    main {
+      flex: 1;
+      padding: 4rem 0 6rem;
+      animation: fadeUp 0.9s ease 0.2s both;
+    }
+
+    /* ---- SECTION LABEL ---- */
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ---- LATEST EDITION FEATURE ---- */
+    .feature-edition {
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--rule);
+      padding: 2.8rem 0 2.4rem;
+      margin-bottom: 4rem;
+    }
+
+    .feature-edition .edition-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .feature-edition h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.25;
+      margin-bottom: 1.2rem;
+      color: var(--ink);
+    }
+
+    .feature-edition .standfirst {
+      font-size: 1.05rem;
+      color: var(--accent);
+      line-height: 1.65;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .feature-edition .read-link {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .feature-edition .read-link:hover {
+      color: var(--muted);
+      border-color: var(--muted);
+    }
+
+    /* ---- ARCHIVE LIST ---- */
+    .archive-list {
+      list-style: none;
+    }
+
+    .archive-list li {
+      border-bottom: 1px solid var(--rule);
+      padding: 1.4rem 0;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1.5rem;
+      align-items: baseline;
+      transition: background 0.15s;
+    }
+
+    .archive-list li:first-child {
+      border-top: 1px solid var(--rule);
+    }
+
+    .archive-date {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-top: 0.15rem;
+      flex-shrink: 0;
+    }
+
+    .archive-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--ink);
+      text-decoration: none;
+      line-height: 1.4;
+    }
+
+    .archive-title:hover {
+      color: var(--muted);
+    }
+
+    /* ---- ABOUT STRIP ---- */
+    .about-strip {
+      margin-top: 5rem;
+      padding-top: 2.4rem;
+      border-top: 3px double var(--ink);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .about-strip h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+      color: var(--ink);
+    }
+
+    .about-strip p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer p {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* ---- ANIMATIONS ---- */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 600px) {
+      .masthead { padding: 2.2rem 1.2rem 1.6rem; }
+      .container { padding: 0 1.2rem; }
+      .about-strip { grid-template-columns: 1fr; gap: 2rem; }
+      .archive-list li { grid-template-columns: 1fr; gap: 0.3rem; }
+      .archive-date { font-size: 0.65rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="container">
+      <p class="masthead-eyebrow">South Africa &nbsp;·&nbsp; Cultural Intelligence</p>
+      <h1>The Cultural Brief <em>(SA)</em></h1>
+      <div class="masthead-rule">
+        <span></span>
+        <span class="ornament">&#10022;</span>
+        <span></span>
+      </div>
+      <p class="masthead-tagline">Curated and contextualised South African arts and cultural activity — with editorial judgment, never algorithms.</p>
+      <p class="masthead-meta">Published every Thursday at 08:00 SAST</p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="container">
+
+      <!-- LATEST EDITION FEATURE -->
+      <div class="feature-edition">
+        <p class="edition-label">Latest Edition &nbsp;·&nbsp; 05 March 2026</p>
+        <h2>The Empty Room: On the Goliath Affair and the State's Idea of South Africa</h2>
+        <p class="standfirst">South Africa's pavilion at the 61st Venice Biennale will be empty. The cancellation of Gabrielle Goliath's <em>Elegy</em> — and the court ruling that let it stand — raises the question the country cannot avoid: who decides what the nation may say about itself?</p>
+        <a href="editions/05-march-2026.html" class="read-link">Read this edition &rarr;</a>
+      </div>
+
+      <!-- ARCHIVE -->
+      <p class="section-label">Archive</p>
+      <ul class="archive-list">
+        <li>
+          <span class="archive-date">05 Mar 2026</span>
+          <a href="editions/05-march-2026.html" class="archive-title">The Empty Room — On the Goliath Affair and the State's Idea of South Africa</a>
+        </li>
+        <!-- Add new editions above this line in the same format -->
+      </ul>
+
+      <!-- ABOUT STRIP -->
+      <div class="about-strip">
+        <div>
+          <h3>About this publication</h3>
+          <p>One edition, every Thursday — The Cultural Brief (SA) is a deliberately scarce South African cultural newsletter edited for seriousness, not scale. It covers the arts, literature, heritage, and cultural policy with the calm authority of a trusted colleague, never the urgency of a feed.</p>
+        </div>
+        <div>
+          <h3>Who it is for</h3>
+          <p>Urban working professionals, practising artists, curators, academics, and culturally serious South Africans — in-country and in the diaspora — who value signal over noise. One edition is the product. Scarcity is intentional.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><em>One edition. Every Thursday. Thank you for reading.</em></p>
+  </footer>
+
+</body>
+</html>
