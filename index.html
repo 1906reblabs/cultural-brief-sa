@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --ink: #1a1714;
@@ -17,18 +16,8 @@
       --rule: #c9c3b8;
       --accent: #2c2c2c;
     }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      font-size: 18px;
-      scroll-behavior: smooth;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; scroll-behavior: smooth; }
     body {
       background-color: var(--paper);
       color: var(--ink);
@@ -38,7 +27,6 @@
       display: flex;
       flex-direction: column;
     }
-
     body::before {
       content: '';
       position: fixed;
@@ -48,7 +36,6 @@
       z-index: 0;
       opacity: 0.5;
     }
-
     .masthead {
       border-bottom: 3px double var(--ink);
       padding: 3rem 2rem 2rem;
@@ -56,7 +43,6 @@
       position: relative;
       animation: fadeDown 0.9s ease both;
     }
-
     .masthead-eyebrow {
       font-family: 'EB Garamond', serif;
       font-size: 0.7rem;
@@ -65,7 +51,6 @@
       color: var(--muted);
       margin-bottom: 1.2rem;
     }
-
     .masthead h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.4rem, 6vw, 4.2rem);
@@ -74,12 +59,7 @@
       line-height: 1.1;
       color: var(--ink);
     }
-
-    .masthead h1 em {
-      font-style: italic;
-      font-weight: 400;
-    }
-
+    .masthead h1 em { font-style: italic; font-weight: 400; }
     .masthead-rule {
       display: flex;
       align-items: center;
@@ -87,21 +67,8 @@
       gap: 1rem;
       margin: 1.4rem 0 1.2rem;
     }
-
-    .masthead-rule span {
-      display: block;
-      height: 1px;
-      width: 80px;
-      background: var(--rule);
-    }
-
-    .masthead-rule .ornament {
-      width: auto;
-      font-size: 0.8rem;
-      color: var(--muted);
-      letter-spacing: 0.15em;
-    }
-
+    .masthead-rule span { display: block; height: 1px; width: 80px; background: var(--rule); }
+    .masthead-rule .ornament { width: auto; font-size: 0.8rem; color: var(--muted); letter-spacing: 0.15em; }
     .masthead-tagline {
       font-family: 'EB Garamond', serif;
       font-style: italic;
@@ -110,7 +77,6 @@
       max-width: 480px;
       margin: 0 auto;
     }
-
     .masthead-meta {
       margin-top: 1.6rem;
       font-size: 0.72rem;
@@ -118,7 +84,6 @@
       text-transform: uppercase;
       color: var(--muted);
     }
-
     .container {
       max-width: 760px;
       margin: 0 auto;
@@ -127,13 +92,7 @@
       position: relative;
       z-index: 1;
     }
-
-    main {
-      flex: 1;
-      padding: 4rem 0 6rem;
-      animation: fadeUp 0.9s ease 0.2s both;
-    }
-
+    main { flex: 1; padding: 4rem 0 6rem; animation: fadeUp 0.9s ease 0.2s both; }
     .section-label {
       font-size: 0.68rem;
       letter-spacing: 0.25em;
@@ -144,21 +103,13 @@
       align-items: center;
       gap: 1.2rem;
     }
-
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--rule);
-    }
-
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
     .feature-edition {
       border-top: 2px solid var(--ink);
       border-bottom: 1px solid var(--rule);
       padding: 2.8rem 0 2.4rem;
       margin-bottom: 4rem;
     }
-
     .feature-edition .edition-label {
       font-size: 0.68rem;
       letter-spacing: 0.22em;
@@ -166,7 +117,6 @@
       color: var(--muted);
       margin-bottom: 1rem;
     }
-
     .feature-edition h2 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.6rem, 4vw, 2.4rem);
@@ -176,7 +126,6 @@
       margin-bottom: 1.2rem;
       color: var(--ink);
     }
-
     .feature-edition .standfirst {
       font-size: 1.05rem;
       color: var(--accent);
@@ -185,14 +134,7 @@
       margin-bottom: 2rem;
       font-style: italic;
     }
-
-    .edition-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
+    .edition-links { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
     .read-link {
       display: inline-block;
       font-size: 0.75rem;
@@ -204,12 +146,7 @@
       padding-bottom: 2px;
       transition: color 0.2s, border-color 0.2s;
     }
-
-    .read-link:hover {
-      color: var(--muted);
-      border-color: var(--muted);
-    }
-
+    .read-link:hover { color: var(--muted); border-color: var(--muted); }
     .pdf-link {
       display: inline-block;
       font-size: 0.75rem;
@@ -221,16 +158,8 @@
       padding-bottom: 2px;
       transition: color 0.2s, border-color 0.2s;
     }
-
-    .pdf-link:hover {
-      color: var(--ink);
-      border-color: var(--ink);
-    }
-
-    .archive-list {
-      list-style: none;
-    }
-
+    .pdf-link:hover { color: var(--ink); border-color: var(--ink); }
+    .archive-list { list-style: none; }
     .archive-list li {
       border-bottom: 1px solid var(--rule);
       padding: 1.4rem 0;
@@ -239,11 +168,7 @@
       gap: 1.5rem;
       align-items: baseline;
     }
-
-    .archive-list li:first-child {
-      border-top: 1px solid var(--rule);
-    }
-
+    .archive-list li:first-child { border-top: 1px solid var(--rule); }
     .archive-date {
       font-size: 0.72rem;
       letter-spacing: 0.12em;
@@ -252,7 +177,6 @@
       padding-top: 0.15rem;
       flex-shrink: 0;
     }
-
     .archive-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.05rem;
@@ -261,9 +185,7 @@
       text-decoration: none;
       line-height: 1.4;
     }
-
     .archive-title:hover { color: var(--muted); }
-
     .archive-pdf {
       font-size: 0.68rem;
       letter-spacing: 0.15em;
@@ -274,12 +196,7 @@
       padding-bottom: 1px;
       white-space: nowrap;
     }
-
-    .archive-pdf:hover {
-      color: var(--ink);
-      border-color: var(--ink);
-    }
-
+    .archive-pdf:hover { color: var(--ink); border-color: var(--ink); }
     .about-strip {
       margin-top: 5rem;
       padding-top: 2.4rem;
@@ -288,7 +205,6 @@
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
     }
-
     .about-strip h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
@@ -297,13 +213,7 @@
       margin-bottom: 0.8rem;
       color: var(--ink);
     }
-
-    .about-strip p {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
+    .about-strip p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
     footer {
       border-top: 1px solid var(--rule);
       padding: 2rem;
@@ -311,24 +221,9 @@
       position: relative;
       z-index: 1;
     }
-
-    footer p {
-      font-family: 'EB Garamond', serif;
-      font-style: italic;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(14px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
+    footer p { font-family: 'EB Garamond', serif; font-style: italic; font-size: 0.9rem; color: var(--muted); }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp   { from { opacity: 0; transform: translateY(14px);  } to { opacity: 1; transform: translateY(0); } }
     @media (max-width: 600px) {
       .masthead { padding: 2.2rem 1.2rem 1.6rem; }
       .container { padding: 0 1.2rem; }
@@ -361,27 +256,34 @@
 
       <!-- LATEST EDITION FEATURE -->
       <div class="feature-edition">
-        <p class="edition-label">Latest Edition &nbsp;·&nbsp; 05 March 2026</p>
-        <h2>The Empty Room: On the Goliath Affair and the State's Idea of South Africa</h2>
-        <p class="standfirst">South Africa's pavilion at the 61st Venice Biennale will be empty. The cancellation of Gabrielle Goliath's <em>Elegy</em> — and the court ruling that let it stand — raises the question the country cannot avoid: who decides what the nation may say about itself?</p>
+        <p class="edition-label">Latest Edition &nbsp;·&nbsp; 12 March 2026</p>
+        <h2>Sound as Inheritance: Nduduzo Makhathini and the Cosmological Jazz</h2>
+        <p class="standfirst">Two independent productions this week reached toward the same Ibsen archetype — the truth-teller the community cannot afford to hear. This edition follows that thread into theatre, into literature, and into the work of South Africa's most considered jazz mind.</p>
         <div class="edition-links">
-          <a href="editions/05-march-2026.html" class="read-link">Read this edition &rarr;</a>
-          <a href="the-cultural-brief-sa-05-march-2026.md.pdf" class="pdf-link" target="_blank">Download PDF &rarr;</a>
+          <a href="editions/12-march-2026.html" class="read-link">Read this edition &rarr;</a>
+          <a href="the-cultural-brief-sa-12-march-2026.pdf" class="pdf-link" target="_blank">Download PDF &rarr;</a>
         </div>
       </div>
 
       <!-- ARCHIVE -->
       <p class="section-label">Archive</p>
       <ul class="archive-list">
+
+        <li>
+          <span class="archive-date">12 Mar 2026</span>
+          <a href="editions/12-march-2026.html" class="archive-title">Sound as Inheritance — Nduduzo Makhathini and the Cosmological Jazz</a>
+          <a href="the-cultural-brief-sa-12-march-2026.pdf" class="archive-pdf" target="_blank">PDF</a>
+        </li>
+
         <li>
           <span class="archive-date">05 Mar 2026</span>
           <a href="editions/05-march-2026.html" class="archive-title">The Empty Room — On the Goliath Affair and the State's Idea of South Africa</a>
           <a href="the-cultural-brief-sa-05-march-2026.md.pdf" class="archive-pdf" target="_blank">PDF</a>
         </li>
-        <!-- ADD NEW EDITIONS ABOVE THIS LINE using the same <li> block -->
+
+        <!-- ADD NEW EDITIONS ABOVE THIS LINE -->
       </ul>
 
-      <!-- ABOUT -->
       <div class="about-strip">
         <div>
           <h3>About this publication</h3>
