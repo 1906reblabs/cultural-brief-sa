@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Cultural Brief (SA) — 2 April 2026</title>
+  <meta name="description" content="Edition 2 April 2026: In Minor Keys — Koyo Kouoh, the Venice Biennale, and What It Means to Curate the World from Africa."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1714;--paper:#f5f2ec;--muted:#7a7167;--rule:#c9c3b8;--accent:#2c2c2c;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:18px;scroll-behavior:smooth;}
+    body{background-color:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;line-height:1.75;min-height:100vh;display:flex;flex-direction:column;}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.5;}
+    .container{max-width:680px;margin:0 auto;padding:0 2rem;width:100%;position:relative;z-index:1;}
+    .masthead{border-bottom:3px double var(--ink);padding:2.4rem 2rem 1.8rem;text-align:center;animation:fadeDown 0.9s ease both;}
+    .masthead-nav{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem;}
+    .masthead-nav a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;transition:color 0.2s;}
+    .masthead-nav a:hover{color:var(--ink);}
+    .masthead h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);font-weight:700;letter-spacing:-0.01em;line-height:1.1;color:var(--ink);}
+    .masthead h1 em{font-style:italic;font-weight:400;}
+    .masthead-rule{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1.2rem 0 1rem;}
+    .masthead-rule span{display:block;height:1px;width:60px;background:var(--rule);}
+    .masthead-rule .ornament{font-size:0.75rem;color:var(--muted);letter-spacing:0.15em;}
+    .masthead-meta{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);}
+    main{flex:1;padding:3.5rem 0 6rem;animation:fadeUp 0.9s ease 0.15s both;}
+    .edition-header{border-bottom:1px solid var(--rule);padding-bottom:2.4rem;margin-bottom:3rem;}
+    .edition-kicker{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
+    .edition-title{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4.5vw,2.6rem);font-weight:400;font-style:italic;line-height:1.2;color:var(--ink);margin-bottom:1.2rem;}
+    .edition-standfirst{font-size:1.05rem;color:var(--accent);font-style:italic;line-height:1.65;border-left:2px solid var(--rule);padding-left:1.2rem;margin-bottom:1.8rem;}
+    .opening-quote{margin:0 0 3rem;padding:1.6rem 0 1.6rem 1.4rem;border-left:2px solid var(--ink);}
+    .opening-quote blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;line-height:1.6;color:var(--ink);margin-bottom:0.6rem;}
+    .opening-quote cite{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);font-style:normal;}
+    p{margin-bottom:1.4rem;}
+    p:last-child{margin-bottom:0;}
+    .section-label{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin:3.5rem 0 1.8rem;display:flex;align-items:center;gap:1.2rem;}
+    .section-label::after{content:'';flex:1;height:1px;background:var(--rule);}
+    .cultural-signal{background:transparent;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:1.8rem 0;margin-bottom:3rem;}
+    .cultural-signal p{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;line-height:1.6;color:var(--ink);margin:0;}
+    .dispatch{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--rule);}
+    .dispatch:last-of-type{border-bottom:none;}
+    .dispatch h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:400;font-style:italic;line-height:1.3;margin-bottom:0.5rem;color:var(--ink);}
+    .dispatch .dispatch-meta{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
+    .dispatch-footer{font-size:0.82rem;color:var(--muted);margin-top:1rem;font-style:italic;}
+    .long-essay{margin:4rem 0;}
+    .long-essay-label{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem;display:flex;align-items:center;gap:1.2rem;}
+    .long-essay-label::after{content:'';flex:1;height:1px;background:var(--rule);}
+    .long-essay h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3.5vw,2rem);font-weight:700;line-height:1.2;margin-bottom:1.4rem;color:var(--ink);}
+    .long-essay .essay-body p{margin-bottom:1.5rem;font-size:1rem;}
+    .long-essay .essay-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:3.2rem;line-height:0.85;float:left;margin-right:0.1em;margin-top:0.1em;color:var(--ink);}
+    .closing{margin-top:4rem;padding-top:2.4rem;border-top:3px double var(--ink);}
+    .closing-label{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem;}
+    .closing p{font-size:0.96rem;color:var(--accent);font-style:italic;line-height:1.75;}
+    .signoff{text-align:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--rule);}
+    .signoff p{font-family:'EB Garamond',serif;font-style:italic;font-size:0.95rem;color:var(--muted);}
+    footer{border-top:1px solid var(--rule);padding:2rem;text-align:center;position:relative;z-index:1;}
+    footer p{font-family:'EB Garamond',serif;font-style:italic;font-size:0.85rem;color:var(--muted);}
+    footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);}
+    footer a:hover{color:var(--ink);}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-14px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+    @media(max-width:600px){
+      .masthead{padding:1.8rem 1.2rem 1.4rem;}
+      .container{padding:0 1.2rem;}
+      .opening-quote{padding-left:1rem;}
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container">
+    <p class="masthead-nav"><a href="../index.html">&larr; All Editions</a></p>
+    <h1>The Cultural Brief <em>(SA)</em></h1>
+    <div class="masthead-rule"><span></span><span class="ornament">&#10022;</span><span></span></div>
+    <p class="masthead-meta">South Africa &nbsp;·&nbsp; Cultural Intelligence &nbsp;·&nbsp; 2 April 2026</p>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="edition-header">
+      <p class="edition-kicker">Edition &nbsp;·&nbsp; 2 April 2026</p>
+      <h1 class="edition-title">In Minor Keys: Koyo Kouoh's Unfinished Biennale, and What South Africa Does With the Gift</h1>
+      <p class="edition-standfirst">The Venice Biennale opens in five weeks under a curatorial vision conceived by a woman who did not live to see it realised. South Africa's pavilion has a story of its own — contested, transformed, and still unresolved. Freedom Month begins tomorrow. Easter Thursday falls in a country that has always held mourning and ceremony in the same hand. This week asks what it means to inherit a vision.</p>
+    </div>
+
+    <div class="opening-quote">
+      <blockquote>"Writing is always and at once an exploration of self and of the world; of individual and collective being."</blockquote>
+      <cite>— Nadine Gordimer, Nobel Prize Lecture, 1991</cite>
+    </div>
+
+    <p>This is Easter Thursday. In the Southern Drakensberg, Splashy Fen is already underway — its thirty-fifth year, 300 artists across six stages, the river running cold below the mountains that contain the oldest rock paintings on the continent. In Oudtshoorn, the KKNK closes its final two days. In Venice, in five weeks, the world's most prestigious art biennale will open under a curatorial vision that was set by an African woman who died before she could see it realised.</p>
+
+    <p>April in South Africa is a month that accumulates cultural weight before you can slow it down. Easter sits at one end and Freedom Day at the other, with twenty-seven days between them that the country has, since 1994, called Freedom Month. The pairing is not liturgically necessary but it is culturally apt: both occasions are concerned with the relationship between death and what it makes possible; both carry the obligation to ask whether what was promised has been delivered.</p>
+
+    <p>The Gordimer line at the top of this edition is not a decorative choice. She wrote it in 1991, accepting the Nobel Prize in Literature in Stockholm, the year before F.W. de Klerk released the man who would become the country's first democratic president. Her speech was about what literature is for — about writing as the simultaneous act of turning inward and turning outward, of finding the self and the world in the same gesture. The framing matters this week because the cultural figure who most commands attention — Koyo Kouoh, the late curator of the 61st Venice Biennale's main exhibition — understood her curatorial practice in precisely those terms.</p>
+
+    <p>Kouoh's exhibition theme, "In Minor Keys," will be realised this May by a team of five curatorial advisers working from her framework. The phrase is drawn from musical theory — from the flattened interval that carries feeling the major scale cannot hold. The long essay this week takes up what it means for that phrase to anchor the world's most visible art event, and what South Africa's own complicated pavilion story says about the country's capacity to inhabit the vision one of its own institutions nurtured and then watched die.</p>
+
+    <p>Splashy Fen opens in the Drakensberg as a corrective to all of this — not by ignoring the complexity, but by demonstrating that 35 years of continuous gathering in one of the continent's most extraordinary landscapes is itself a form of cultural endurance that the institutions cannot replicate and would not know how to fund.</p>
+
+    <div class="cultural-signal">
+      <p>Koyo Kouoh is gone. "In Minor Keys" remains. In Venice from 9 May, artists from across the world will respond to a vision curated by an African woman who did not live to see it realised. South Africa will be there — under a new governance model, with a pavilion story that is still being written. Whether it will arrive in a way that honours what Kouoh understood the world stage to be for is a question the sector has not yet answered, and five weeks is not long.</p>
+    </div>
+
+    <p class="section-label">Curated Dispatches</p>
+
+    <div class="dispatch">
+      <h3>Splashy Fen — Thirty-Five Years in the Drakensberg</h3>
+      <p class="dispatch-meta">Southern Drakensberg, KwaZulu-Natal &nbsp;·&nbsp; 2–6 April</p>
+      <p>Splashy Fen opened yesterday and runs through Sunday in the Southern Drakensberg, on a farm approximately 250 kilometres from Durban in a valley within a UNESCO World Heritage Site. It is South Africa's oldest continuously running music festival — 1990 to 2026, thirty-five years without interruption, which in the South African cultural calendar is a form of institutional achievement that deserves to be named as such.</p>
+      <p>The 2026 programme spans six stages and more than 300 artists. The headlining lineup includes Jeremy Loops, Jesse Clegg in his Splashy debut, Matthew Mole, Veranda Panda (returning after their 2025 Golden Otter Award), and Canadian singer-songwriter Billy Raffoul, among the festival's first confirmed international headliners. The presence of Dutch folk-pop duo Jack and the Weatherman, making their South African debut, extends the international element without overwhelming the domestic character that has always been Splashy's actual product.</p>
+      <p>What Splashy Fen has always understood, and what makes it worth attending to in a cultural newsletter that is otherwise suspicious of festivals at scale, is that the music is not the point. The point is the gathering itself — families and strangers in the same mountain valley, for four nights, without the infrastructure of the city. That structure generates a form of temporary community that the concert hall cannot produce and the streaming platform has made structurally harder to imagine. Thirty-five years of sustaining it is not an accident. It is a curatorial act.</p>
+      <p class="dispatch-footer">Splashy Fen, Southern Drakensberg. 2–6 April. splashyfen.co.za.</p>
+    </div>
+
+    <div class="dispatch">
+      <h3>KKNK — Final Curtain, Saturday in Oudtshoorn</h3>
+      <p class="dispatch-meta">Oudtshoorn &nbsp;·&nbsp; Closes 4 April</p>
+      <p>The Klein Karoo Nasionale Kunstefees closes this Saturday. For those who attended: the studio productions this year continued the gradual broadening examined in last week's essay — work in Cape Afrikaans vernacular, commissions that engage the language's contradictions rather than papering over them. For those who did not: the programme documentation is worth seeking out. The KKNK's studio archive, when compiled, is among the more reliable records of what new South African theatrical work was being produced in any given year.</p>
+      <p>The week in Oudtshoorn ends with the same question it began with: not whether the festival happened, but whether it moved. The answer, as always with institutions in the middle of their own transformation, is partially yes, and the partial is doing significant work.</p>
+      <p class="dispatch-footer">KKNK, Oudtshoorn. Final performances Saturday 4 April. kknk.co.za.</p>
+    </div>
+
+    <div class="dispatch">
+      <h3>South Africa at Venice 2026 — A New Model, and What It Costs</h3>
+      <p class="dispatch-meta">Arts Policy &nbsp;·&nbsp; Venice Biennale, May–November 2026</p>
+      <p>South Africa will participate in the 61st Venice Biennale Arte, which opens to the public on 9 May. The Department of Sport, Arts and Culture has partnered with Art Periodic South Africa (A°P), a registered non-profit, to fundraise, administer, and produce the pavilion — a significant structural shift away from the purely government-led model that produced, and then destroyed, the Goliath selection. Latitudes Online serves as media and strategic partner. The pavilion is located in the historic Arsenale.</p>
+      <p>The curatorial selection process under A°P was itself contested: the selection committee appointed by A°P in December 2025 unanimously selected Gabrielle Goliath's <em>Elegy</em> again — the same work the minister had cancelled. A subsequent legal challenge brought by Goliath, Masondo, and others against the new process was dismissed by the Gauteng High Court, which ruled in favour of the department and A°P and ordered the applicants to pay costs. The pavilion will proceed under A°P's oversight, with a curatorial team yet to be confirmed publicly as of this week.</p>
+      <p>The governance shift is worth naming clearly. For the first time, the South African pavilion at Venice is being produced by a sector organisation rather than a government department. If the model holds, it represents a form of structural insulation against the kind of ministerial content interference that emptied the pavilion in the first instance. Whether the model holds — whether the department's retained oversight creates the same conditions that produced the Goliath cancellation under a different institutional label — is what the May opening will begin to answer.</p>
+      <p class="dispatch-footer">Venice Biennale Arte 2026. Preview days 6–8 May. Public opening 9 May. South African Pavilion, Arsenale. artperiodic.co.za.</p>
+    </div>
+
+    <div class="dispatch">
+      <h3>AfrikaBurn — Tankwa Karoo, Late April</h3>
+      <p class="dispatch-meta">Tankwa Karoo &nbsp;·&nbsp; 27 April – 3 May &nbsp;·&nbsp; Advance notice</p>
+      <p>AfrikaBurn opens in the Tankwa Karoo on 27 April — a week after Freedom Day, in the Northern Cape desert that has hosted this event since 2007. This edition is worth noting ahead of time for one specific reason: the 2026 poster artist is Fazel Ockhuys, and the thematic frame around the installation programme engages questions of collective memory and transformation that sit with unusual coherence in a Freedom Month context. The large-scale art installations — several of which engage the !Xun and Khwe artist communities whose displacement was linked to the South African Border War — are, at their best, the event's most serious contribution to the cultural landscape. The music infrastructure around them is secondary to that contribution, even if it receives more of the coverage.</p>
+      <p>For a publication committed to editorial scarcity, AfrikaBurn requires care: it is large, it generates hype, and it attracts the kind of coverage that obscures more than it illuminates. What is worth attending to is the immersive art programme, and specifically the work produced in dialogue with IFAS's <em>Futures_Past</em> initiative, which is using AfrikaBurn as a site for some of its archival immersive works ahead of the formal exhibition programme opening later in the year.</p>
+      <p class="dispatch-footer">AfrikaBurn, Tankwa Karoo. 27 April – 3 May. afrikaburn.org. Tickets required; limited availability.</p>
+    </div>
+
+    <div class="long-essay">
+      <p class="long-essay-label">Long Essay</p>
+      <h2>In Minor Keys: Koyo Kouoh, the Venice Biennale, and What It Means to Curate the World from Africa</h2>
+      <div class="essay-body">
+
+        <p>On 10 May 2025, Koyo Kouoh died. She was fifty-six years old. She was the Executive Director and Chief Curator of the Zeitz Museum of Contemporary Art Africa in Cape Town, the most significant institutional position in the African contemporary art world. She was also the appointed curator of the 61st Venice Biennale's central exhibition — the first African-born woman to hold the role, and the first curator to bring that appointment to a major art biennale from an institutional home on the African continent. She died eleven days before she was due to announce the exhibition's theme. The announcement was made anyway, with her family's blessing, by the Biennale: "In Minor Keys."</p>
+
+        <p>The phrase is drawn from musical theory. A minor key is defined by the interval that separates its third degree from the root — a flattened third, a semitone lower than its major equivalent. The effect is a shift in emotional register: the same harmonic material, in a different key, carries feeling that the major scale cannot hold. Composers have used the distinction to navigate grief, longing, unresolved tension. There is no hierarchy between the scales. There is only the question of what you are trying to express, and which key holds it.</p>
+
+        <p>As a curatorial framework, "In Minor Keys" was Kouoh's refusal of the assumption that the most important art is the art that makes the loudest claim. Her work at Zeitz MOCAA, and before that at RAW Material Company in Dakar, had consistently been organised around the same principle: that the practices most worth attending to are often those working at oblique angles to the dominant culture — not marginal, but differently centred. Her institutional ambition was not to make African art legible to a Western gaze but to build the infrastructure from which African art could look outward on its own terms. The Venice appointment was that project at its largest scale.</p>
+
+        <p>It is impossible to understand what her appointment meant without understanding where she came from and what she had built. Kouoh was born in Bamenda, Cameroon, and trained in France and Germany before building her practice in Dakar, where RAW Material Company became, under her leadership, one of the continent's most rigorous sites of curatorial thinking — a space that understood itself as both a cultural institution and a form of intellectual infrastructure, producing critical writing and education programmes alongside exhibitions. She brought that understanding to Cape Town, where Zeitz MOCAA opened in 2017, and where she worked to make the collection — the largest dedicated collection of African contemporary art in the world — the basis not for a trophy institution but for a sustained argument about what African art is and what it demands from its audiences.</p>
+
+        <p>The argument was not sentimental. Kouoh was not interested in affirming African art's value by reference to its suffering or its resilience or its capacity to survive the conditions European colonialism created. She was interested in African art's formal ambition, its cosmological range, its capacity to articulate ideas about the world that no other tradition could articulate in quite the same way. "In Minor Keys" is a phrase that operates in that register: it is not claiming a subordinate position, or celebrating survival from below. It is claiming a different tonal system — one whose expressive capacity the dominant tradition has systematically undervalued, but which was always there, always complete, waiting to be heard at full volume.</p>
+
+        <p>Five curatorial advisers are now realising her vision. They were appointed by the Biennale with Kouoh's family's support, and they have access to her research, her notes, her correspondence, the full working archive of a curator in the final year of preparation for the most significant project of her career. What they will produce in Venice from 9 May is, in the most literal sense, an act of cultural transmission — the passing of a vision from one person's mind into the world, mediated by others who understood her well enough to try to do it justice.</p>
+
+        <p>That act of transmission has a specific resonance for South Africa, which is where Kouoh did her most significant institutional work, and which is where — in the months between her appointment and her death — the cultural conditions that her curatorial vision was designed to resist were most visibly operative. The Goliath affair happened while Kouoh was preparing for Venice. The minister who cancelled Gabrielle Goliath's <em>Elegy</em> — a work that mourned Palestinian and South African women killed in contexts of structural violence — was making, in practice, exactly the argument that "In Minor Keys" was designed to contest: that the state has the authority to determine which grief is permissible on a national platform, and which discomfort the country's cultural representatives are permitted to create in international spaces.</p>
+
+        <p>Kouoh would not have framed it in those terms. She would have framed it in the terms of artistic freedom and curatorial independence — the same terms the selection committee used when it stood behind its choice of <em>Elegy</em>, and again when A°P's selection process chose it again. But the underlying argument is continuous: that cultural representation at the national level is either the expression of an artist's full vision, which means accepting the discomfort that entails, or it is something else — promotion, projection, self-flattery. The second thing does not belong at Venice.</p>
+
+        <p>The new governance model for the South African pavilion — Art Periodic as producing organisation, DSAC retaining the lease and some oversight, a sector-led advisory committee — is an institutional response to the conditions that produced the Goliath cancellation. It is a better structure than what preceded it. Whether it is a sufficient structure depends on questions that have not yet been tested: whether the minister's authority over pavilion content is genuinely constrained by the new model, or merely relocated; whether the advisory committee has the independence to resist political pressure; whether A°P has the institutional confidence to hold that line if it is tested again.</p>
+
+        <p>These are not abstract questions. The Venice preview opens in five weeks. The pavilion content — still not publicly confirmed as of this edition — will be made in those weeks or has been made already, under the new model, in the shadow of everything that happened before it. What South Africa shows in Venice this May will say something about whether the governance reform was structural or cosmetic. It will also say something about whether the country that nurtured Koyo Kouoh's institutional vision is capable of honouring it at home.</p>
+
+        <p>Kouoh said, in a 2023 interview published in <em>frieze</em>, that the museum's job is not to collect and display but to create the conditions under which art can do its most complete work — which means protecting the space in which the work is free to be uncomfortable, unresolved, and unwilling to provide reassurance. That formulation is what the Venice selection committee invoked when it chose <em>Elegy</em> twice. It is what the selection committee's public statement invoked when it said that the cancellation "constitutes an abuse of executive authority and a serious violation of the principles enshrined in South Africa's Constitution."</p>
+
+        <p>Kouoh is not here to see whether the country she called home for the last years of her life will take that argument seriously. Her exhibition opens on 9 May regardless: five advisers, one vision, "In Minor Keys." The rest of the world will come to the Giardini and the Arsenale and encounter, for the first time at the scale of the central Biennale exhibition, a curatorial intelligence formed on the African continent. That is the gift. What South Africa does with it — in the pavilion next to the main exhibition, in the institutions it funds and the artists it platforms, in the governance structures it builds or refuses to build — is the question that the month of April, which is also Freedom Month, has the obligation to pose.</p>
+
+      </div>
+    </div>
+
+    <div class="closing">
+      <p class="closing-label">Closing Reflection</p>
+      <p>Easter Thursday in South Africa. In the Drakensberg, ten thousand people have gathered in a mountain valley to listen to music under rock paintings that are twenty-six thousand years old. In the Klein Karoo, a language is finishing its thirty-first festival of arguing with itself about who it belongs to. In Venice, in five weeks, the first African-born woman to curate the world's most influential art exhibition will speak, posthumously, in a key she chose before she died.</p>
+      <p style="margin-top:1rem;">Freedom Month begins tomorrow. The question it has always carried — not whether the rights are proclaimed, but whether they are made real — is the same question the cultural sector has been asking since January. It has not yet been answered. The asking continues.</p>
+    </div>
+
+    <div class="signoff">
+      <p><em>One edition. Every Thursday. Thank you for reading.</em></p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>The Cultural Brief (SA) is published weekly at <a href="https://1906reblabs.github.io/cultural-brief-sa/">1906reblabs.github.io/cultural-brief-sa</a></p>
+</footer>
+
+</body>
+</html>
