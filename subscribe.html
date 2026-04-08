@@ -5,374 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Subscribe — The Cultural Brief (SA)</title>
   <meta name="description" content="One edition. Every Thursday at 08:00 SAST. Curated South African cultural intelligence — with editorial judgment, never algorithms."/>
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Subscribe — The Cultural Brief (SA)"/>
   <meta property="og:description" content="One edition. Every Thursday. Curated South African arts and cultural intelligence — signal, not noise."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://1906reblabs.github.io/cultural-brief-sa/subscribe.html"/>
-
+  <meta property="og:image" content="https://1906reblabs.github.io/cultural-brief-sa/og-image.svg"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Subscribe — The Cultural Brief (SA)"/>
+  <meta name="twitter:description" content="One edition. Every Thursday. Curated South African arts and cultural intelligence."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-
   <style>
-    :root {
-      --ink: #1a1714;
-      --paper: #f5f2ec;
-      --muted: #7a7167;
-      --rule: #c9c3b8;
-      --accent: #2c2c2c;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { font-size: 18px; scroll-behavior: smooth; }
-
-    body {
-      background-color: var(--paper);
-      color: var(--ink);
-      font-family: 'EB Garamond', Georgia, serif;
-      line-height: 1.75;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.5;
-    }
-
-    .container {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* MASTHEAD */
-    .masthead {
-      border-bottom: 3px double var(--ink);
-      padding: 2.4rem 2rem 1.8rem;
-      text-align: center;
-      animation: fadeDown 0.9s ease both;
-    }
-
-    .masthead-nav {
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.4rem;
-    }
-
-    .masthead-nav a {
-      color: var(--muted);
-      text-decoration: none;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 1px;
-      transition: color 0.2s;
-    }
-
-    .masthead-nav a:hover { color: var(--ink); }
-
-    .masthead h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      line-height: 1.1;
-      color: var(--ink);
-    }
-
-    .masthead h1 em { font-style: italic; font-weight: 400; }
-
-    .masthead-rule {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1.2rem 0 1rem;
-    }
-
-    .masthead-rule span { display: block; height: 1px; width: 60px; background: var(--rule); }
-    .masthead-rule .ornament { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.15em; }
-
-    .masthead-meta {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* MAIN */
-    main {
-      flex: 1;
-      padding: 4rem 0 6rem;
-      animation: fadeUp 0.9s ease 0.15s both;
-    }
-
-    .subscribe-header {
-      text-align: center;
-      margin-bottom: 3.5rem;
-      padding-bottom: 3rem;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .subscribe-kicker {
-      font-size: 0.68rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.4rem;
-    }
-
-    .subscribe-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 1.4rem;
-      color: var(--ink);
-    }
-
-    .subscribe-headline em { font-style: italic; font-weight: 400; }
-
-    .subscribe-standfirst {
-      font-size: 1.05rem;
-      color: var(--accent);
-      font-style: italic;
-      line-height: 1.7;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-
-    /* FORM AREA */
-    .subscribe-form-area {
-      margin-bottom: 4rem;
-    }
-
-    /* ── Beehiiv embed goes here ──
-       Replace the placeholder below with your actual Beehiiv embed snippet.
-       The embed automatically inherits the page's font stack if you add
-       the ?font=serif parameter to your Beehiiv embed URL.
-    ── */
-
-    .beehiiv-placeholder {
-      border: 1px solid var(--rule);
-      padding: 2.4rem;
-      text-align: center;
-      background: transparent;
-    }
-
-    .beehiiv-placeholder p {
-      font-style: italic;
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 1.4rem;
-    }
-
-    /* Fallback form styling — matches publication aesthetic */
-    /* Remove this block once Beehiiv embed is live */
-    .fallback-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      max-width: 420px;
-      margin: 0 auto;
-    }
-
-    .fallback-form input[type="email"] {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 1rem;
-      padding: 0.75rem 1rem;
-      border: 1px solid var(--rule);
-      background: var(--paper);
-      color: var(--ink);
-      outline: none;
-      transition: border-color 0.2s;
-      border-radius: 0;
-      -webkit-appearance: none;
-    }
-
-    .fallback-form input[type="email"]:focus {
-      border-color: var(--ink);
-    }
-
-    .fallback-form input[type="email"]::placeholder {
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    .fallback-form button {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      padding: 0.75rem 1.5rem;
-      background: var(--ink);
-      color: var(--paper);
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .fallback-form button:hover {
-      background: #3a3330;
-    }
-
-    /* WHAT TO EXPECT */
-    .what-to-expect {
-      margin-bottom: 4rem;
-      padding-top: 3.5rem;
-      border-top: 3px double var(--ink);
-    }
-
-    .section-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-    }
-
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--rule);
-    }
-
-    .promise-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.4rem 3rem;
-      margin-bottom: 2rem;
-    }
-
-    .promise-item h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-style: italic;
-      font-weight: 400;
-      margin-bottom: 0.5rem;
-      color: var(--ink);
-    }
-
-    .promise-item p {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.65;
-      margin: 0;
-    }
-
-    /* SCARCITY STATEMENT */
-    .scarcity-statement {
-      border-top: 2px solid var(--ink);
-      border-bottom: 1px solid var(--rule);
-      padding: 1.6rem 0;
-      margin: 3rem 0;
-      text-align: center;
-    }
-
-    .scarcity-statement p {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: var(--ink);
-      margin: 0;
-    }
-
-    /* ARCHIVE TEASER */
-    .archive-teaser {
-      margin-bottom: 2rem;
-    }
-
-    .archive-teaser-list {
-      list-style: none;
-    }
-
-    .archive-teaser-list li {
-      border-bottom: 1px solid var(--rule);
-      padding: 1rem 0;
-      display: flex;
-      gap: 1.5rem;
-      align-items: baseline;
-    }
-
-    .archive-teaser-list li:first-child {
-      border-top: 1px solid var(--rule);
-    }
-
-    .teaser-date {
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      flex-shrink: 0;
-      min-width: 90px;
-    }
-
-    .teaser-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--ink);
-      text-decoration: none;
-      line-height: 1.4;
-    }
-
-    .teaser-title:hover { color: var(--muted); }
-
-    footer {
-      border-top: 1px solid var(--rule);
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    footer p {
-      font-family: 'EB Garamond', serif;
-      font-style: italic;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    footer a:hover { color: var(--ink); }
-
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-14px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 600px) {
-      .masthead { padding: 1.8rem 1.2rem 1.4rem; }
-      .container { padding: 0 1.2rem; }
-      .promise-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+    :root { --ink:#1a1714; --paper:#f5f2ec; --muted:#7a7167; --rule:#c9c3b8; --accent:#2c2c2c; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:18px;scroll-behavior:smooth;}
+    body{background-color:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;line-height:1.75;min-height:100vh;display:flex;flex-direction:column;}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.5;}
+    .container{max-width:640px;margin:0 auto;padding:0 2rem;width:100%;position:relative;z-index:1;}
+    .masthead{border-bottom:3px double var(--ink);padding:2.4rem 2rem 1.8rem;text-align:center;animation:fadeDown 0.9s ease both;}
+    .masthead-nav{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem;}
+    .masthead-nav a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;transition:color 0.2s;}
+    .masthead-nav a:hover{color:var(--ink);}
+    .masthead h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);font-weight:700;letter-spacing:-0.01em;line-height:1.1;color:var(--ink);}
+    .masthead h1 em{font-style:italic;font-weight:400;}
+    .masthead-rule{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1.2rem 0 1rem;}
+    .masthead-rule span{display:block;height:1px;width:60px;background:var(--rule);}
+    .masthead-rule .ornament{font-size:0.75rem;color:var(--muted);letter-spacing:0.15em;}
+    .masthead-meta{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);}
+    main{flex:1;padding:4rem 0 6rem;animation:fadeUp 0.9s ease 0.15s both;}
+    .subscribe-header{text-align:center;margin-bottom:3.5rem;padding-bottom:3rem;border-bottom:1px solid var(--rule);}
+    .subscribe-kicker{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem;}
+    .subscribe-headline{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;line-height:1.15;margin-bottom:1.4rem;color:var(--ink);}
+    .subscribe-headline em{font-style:italic;font-weight:400;}
+    .subscribe-standfirst{font-size:1.05rem;color:var(--accent);font-style:italic;line-height:1.7;max-width:480px;margin:0 auto;}
+    .subscribe-form-area{margin-bottom:4rem;}
+    .substack-cta-block{border:1px solid var(--rule);padding:2.8rem 2.4rem;text-align:center;}
+    .substack-cta-block p{font-style:italic;color:var(--muted);font-size:0.92rem;margin-bottom:1.8rem;line-height:1.65;}
+    .substack-button{display:inline-block;font-family:'EB Garamond',Georgia,serif;font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.85rem 2rem;background:var(--ink);color:var(--paper);text-decoration:none;transition:background 0.2s;}
+    .substack-button:hover{background:#3a3330;}
+    .substack-note{margin-top:1.2rem;font-size:0.78rem;color:var(--muted);font-style:italic;}
+    .substack-note a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);}
+    .substack-note a:hover{color:var(--ink);}
+    .scarcity-statement{border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:1.6rem 0;margin:3rem 0;text-align:center;}
+    .scarcity-statement p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;line-height:1.6;color:var(--ink);margin:0;}
+    .what-to-expect{margin-bottom:4rem;padding-top:3.5rem;border-top:3px double var(--ink);}
+    .section-label{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem;}
+    .section-label::after{content:'';flex:1;height:1px;background:var(--rule);}
+    .promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem 3rem;margin-bottom:2rem;}
+    .promise-item h3{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;font-weight:400;margin-bottom:0.5rem;color:var(--ink);}
+    .promise-item p{font-size:0.88rem;color:var(--muted);line-height:1.65;margin:0;}
+    .archive-teaser{margin-bottom:2rem;}
+    .archive-teaser-list{list-style:none;}
+    .archive-teaser-list li{border-bottom:1px solid var(--rule);padding:1rem 0;display:flex;gap:1.5rem;align-items:baseline;}
+    .archive-teaser-list li:first-child{border-top:1px solid var(--rule);}
+    .teaser-date{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);flex-shrink:0;min-width:90px;}
+    .teaser-title{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;color:var(--ink);text-decoration:none;line-height:1.4;}
+    .teaser-title:hover{color:var(--muted);}
+    .rss-note{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);font-style:italic;text-align:center;line-height:1.75;}
+    .rss-note a{color:var(--muted);border-bottom:1px solid var(--rule);text-decoration:none;}
+    .rss-note a:hover{color:var(--ink);}
+    footer{border-top:1px solid var(--rule);padding:2rem;text-align:center;position:relative;z-index:1;}
+    footer p{font-family:'EB Garamond',serif;font-style:italic;font-size:0.85rem;color:var(--muted);}
+    footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);}
+    footer a:hover{color:var(--ink);}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-14px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+    @media(max-width:600px){
+      .masthead{padding:1.8rem 1.2rem 1.4rem;}
+      .container{padding:0 1.2rem;}
+      .promise-grid{grid-template-columns:1fr;gap:1.8rem;}
+      .substack-cta-block{padding:2rem 1.2rem;}
     }
   </style>
 </head>
@@ -401,26 +104,14 @@
     </div>
 
     <div class="subscribe-form-area">
-      <!--
-        ════════════════════════════════════════════════
-        BEEHIIV EMBED — Replace this comment block with
-        your Beehiiv embed snippet. Example:
-        <iframe src="https://embeds.beehiiv.com/YOUR-ID"
-                data-test-id="beehiiv-embed"
-                width="100%" height="320" frameborder="0"
-                scrolling="no"
-                style="border-radius:0;border:0;margin:0;background:transparent;">
-        </iframe>
-        ════════════════════════════════════════════════
-      -->
-
-      <!-- FALLBACK FORM — remove once Beehiiv embed is live -->
-      <div class="beehiiv-placeholder">
-        <p>Enter your email to receive The Cultural Brief (SA) every Thursday morning.</p>
-        <form class="fallback-form" action="https://app.beehiiv.com/subscribe" method="post" target="_blank">
-          <input type="email" name="email" placeholder="your@email.com" required autocomplete="email"/>
-          <button type="submit">Subscribe &rarr;</button>
-        </form>
+      <div class="substack-cta-block">
+        <p>The Cultural Brief (SA) is published on Substack. Subscribe there to receive each edition the moment it goes out — Thursday morning, nothing else, no noise.</p>
+        <a href="https://simphiwemlotshwa.substack.com?utm_source=website&utm_medium=subscribe-page" class="substack-button" target="_blank" rel="noopener">
+          Subscribe on Substack &rarr;
+        </a>
+        <p class="substack-note">
+          Already subscribed? <a href="https://simphiwemlotshwa.substack.com/archive" target="_blank" rel="noopener">Browse the Substack archive &rarr;</a>
+        </p>
       </div>
     </div>
 
@@ -430,7 +121,6 @@
 
     <div class="what-to-expect">
       <p class="section-label">What you receive</p>
-
       <div class="promise-grid">
         <div class="promise-item">
           <h3>A lead editorial</h3>
@@ -475,6 +165,11 @@
           <a href="editions/12-march-2026.html" class="teaser-title">Sound as Inheritance — Nduduzo Makhathini and the Cosmological Jazz</a>
         </li>
       </ul>
+    </div>
+
+    <div class="rss-note">
+      <p>The Cultural Brief (SA) publishes a full RSS feed via Substack, compatible with any RSS reader.<br>
+      Feed URL: <a href="https://simphiwemlotshwa.substack.com/feed" target="_blank" rel="noopener">simphiwemlotshwa.substack.com/feed</a></p>
     </div>
 
   </div>
