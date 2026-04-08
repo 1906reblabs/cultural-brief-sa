@@ -5,15 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Cultural Brief (SA)</title>
   <meta name="description" content="A deliberately scarce South African cultural newsletter. One edition, every Thursday. Curated with editorial judgment, never algorithms." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Cultural Brief (SA)"/>
+  <meta property="og:description" content="One edition. Every Thursday. Curated South African arts and cultural intelligence — signal, not noise."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://1906reblabs.github.io/cultural-brief-sa/"/>
+  <meta property="og:image" content="https://1906reblabs.github.io/cultural-brief-sa/og-image.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="The Cultural Brief (SA)"/>
+  <meta name="twitter:description" content="One edition. Every Thursday. Curated South African arts and cultural intelligence."/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
   <style>
     :root { --ink:#1a1714; --paper:#f5f2ec; --muted:#7a7167; --rule:#c9c3b8; --accent:#2c2c2c; }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{font-size:18px;scroll-behavior:smooth;}
     body{background-color:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;line-height:1.7;min-height:100vh;display:flex;flex-direction:column;}
     body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.5;}
+
+    /* MASTHEAD */
     .masthead{border-bottom:3px double var(--ink);padding:3rem 2rem 2rem;text-align:center;position:relative;animation:fadeDown 0.9s ease both;}
     .masthead-eyebrow{font-family:'EB Garamond',serif;font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem;}
     .masthead h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);font-weight:700;letter-spacing:-0.01em;line-height:1.1;color:var(--ink);}
@@ -23,10 +39,27 @@
     .masthead-rule .ornament{width:auto;font-size:0.8rem;color:var(--muted);letter-spacing:0.15em;}
     .masthead-tagline{font-family:'EB Garamond',serif;font-style:italic;font-size:1rem;color:var(--muted);max-width:480px;margin:0 auto;}
     .masthead-meta{margin-top:1.6rem;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);}
+
+    /* NAV LINKS */
+    .masthead-links{margin-top:1.2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;}
+    .masthead-links a{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
+    .masthead-links a:hover{color:var(--ink);border-color:var(--ink);}
+    .masthead-links a.subscribe-nav{color:var(--ink);border-color:var(--ink);}
+    .masthead-links a.subscribe-nav:hover{color:var(--muted);border-color:var(--muted);}
+
+    /* LAYOUT */
     .container{max-width:760px;margin:0 auto;padding:0 2rem;width:100%;position:relative;z-index:1;}
     main{flex:1;padding:4rem 0 6rem;animation:fadeUp 0.9s ease 0.2s both;}
     .section-label{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem;}
     .section-label::after{content:'';flex:1;height:1px;background:var(--rule);}
+
+    /* SUBSCRIBE STRIP */
+    .subscribe-strip{border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:1.6rem 0;margin-bottom:4rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+    .subscribe-strip p{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--ink);line-height:1.5;flex:1;min-width:200px;}
+    .subscribe-strip-cta{display:inline-block;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--paper);background:var(--ink);text-decoration:none;padding:0.65rem 1.4rem;transition:background 0.2s;white-space:nowrap;}
+    .subscribe-strip-cta:hover{background:#3a3330;}
+
+    /* FEATURE EDITION */
     .feature-edition{border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:2.8rem 0 2.4rem;margin-bottom:4rem;}
     .feature-edition .edition-label{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
     .feature-edition h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:400;font-style:italic;line-height:1.25;margin-bottom:1.2rem;color:var(--ink);}
@@ -36,6 +69,8 @@
     .read-link:hover{color:var(--muted);border-color:var(--muted);}
     .pdf-link{display:inline-block;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
     .pdf-link:hover{color:var(--ink);border-color:var(--ink);}
+
+    /* ARCHIVE */
     .archive-list{list-style:none;}
     .archive-list li{border-bottom:1px solid var(--rule);padding:1.4rem 0;display:grid;grid-template-columns:120px 1fr auto;gap:1.5rem;align-items:baseline;}
     .archive-list li:first-child{border-top:1px solid var(--rule);}
@@ -44,13 +79,20 @@
     .archive-title:hover{color:var(--muted);}
     .archive-pdf{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;white-space:nowrap;}
     .archive-pdf:hover{color:var(--ink);border-color:var(--ink);}
+
+    /* ABOUT STRIP */
     .about-strip{margin-top:5rem;padding-top:2.4rem;border-top:3px double var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
     .about-strip h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;font-weight:400;margin-bottom:0.8rem;color:var(--ink);}
     .about-strip p{font-size:0.88rem;color:var(--muted);line-height:1.7;}
+    .about-strip a{color:var(--muted);border-bottom:1px solid var(--rule);text-decoration:none;}
+    .about-strip a:hover{color:var(--ink);}
+
     footer{border-top:1px solid var(--rule);padding:2rem;text-align:center;position:relative;z-index:1;}
     footer p{font-family:'EB Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--muted);}
+
     @keyframes fadeDown{from{opacity:0;transform:translateY(-16px);}to{opacity:1;transform:translateY(0);}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+
     @media(max-width:600px){
       .masthead{padding:2.2rem 1.2rem 1.6rem;}
       .container{padding:0 1.2rem;}
@@ -59,6 +101,7 @@
       .archive-date{font-size:0.65rem;}
       .archive-pdf{display:none;}
       .edition-links{gap:1.2rem;}
+      .subscribe-strip{flex-direction:column;gap:1rem;}
     }
   </style>
 </head>
@@ -75,20 +118,30 @@
       </div>
       <p class="masthead-tagline">Curated and contextualised South African arts and cultural activity — with editorial judgment, never algorithms.</p>
       <p class="masthead-meta">Published every Thursday at 08:00 SAST</p>
+      <nav class="masthead-links">
+        <a href="about.html">About</a>
+        <a href="subscribe.html" class="subscribe-nav">Subscribe &rarr;</a>
+      </nav>
     </div>
   </header>
 
   <main>
     <div class="container">
 
-      <!-- LATEST EDITION FEATURE -->
+      <!-- SUBSCRIBE STRIP -->
+      <div class="subscribe-strip">
+        <p>One edition. Every Thursday. Signal, not noise.</p>
+        <a href="subscribe.html" class="subscribe-strip-cta">Subscribe free &rarr;</a>
+      </div>
+
+      <!-- LATEST EDITION FEATURE — update each Thursday -->
       <div class="feature-edition">
         <p class="edition-label">Latest Edition &nbsp;·&nbsp; 8 April 2026</p>
         <h2>The City as Canvas: Public Space, Light, and the Question of Who the Street Belongs To</h2>
         <p class="standfirst">LUMENOCITY opens tomorrow in the Company's Garden — Africa's first light art festival, built entirely by South African artists, transforming a colonial garden into something the colonists could not have imagined. In Venice in a month, a pavilion holds no South African voice. This week asks what public space is for, and who gets to fill it.</p>
         <div class="edition-links">
           <a href="editions/08-april-2026.html" class="read-link">Read this edition &rarr;</a>
-          <a href="the-cultural-brief-sa-08-april-2026.pdf" class="pdf-link" target="_blank">Download PDF &rarr;</a>
+          <a href="theculturalbriefsa08april2026.pdf" class="pdf-link" target="_blank">Download PDF &rarr;</a>
         </div>
       </div>
 
@@ -99,37 +152,37 @@
         <li>
           <span class="archive-date">08 Apr 2026</span>
           <a href="editions/08-april-2026.html" class="archive-title">The City as Canvas — Public Space, Light, and the Question of Who the Street Belongs To</a>
-          <a href="the-cultural-brief-sa-08-april-2026.pdf" class="archive-pdf" target="_blank">PDF</a>
+          <a href="theculturalbriefsa08april2026.pdf" class="archive-pdf" target="_blank">PDF</a>
         </li>
 
         <li>
           <span class="archive-date">02 Apr 2026</span>
           <a href="editions/02-april-2026.html" class="archive-title">In Minor Keys — Koyo Kouoh's Unfinished Biennale, and What South Africa Does With the Gift</a>
-          <a href="the-cultural-brief-sa-02-april-2026.pdf" class="archive-pdf" target="_blank">PDF</a>
+          <a href="theculturalbriefsa02april2026.pdf" class="archive-pdf" target="_blank">PDF</a>
         </li>
 
         <li>
           <span class="archive-date">26 Mar 2026</span>
           <a href="editions/26-march-2026.html" class="archive-title">The Festival and the Language — What the KKNK Owes the Afrikaans It Was Built On</a>
-          <a href="the-cultural-brief-sa-26-march-2026.pdf" class="archive-pdf" target="_blank">PDF</a>
+          <a href="theculturalbriefsa26march2026.pdf" class="archive-pdf" target="_blank">PDF</a>
         </li>
 
         <li>
           <span class="archive-date">19 Mar 2026</span>
           <a href="editions/19-march-2026.html" class="archive-title">The Bill of Rights at Thirty — What the Constitution Promised South African Cultural Life, and What We Have</a>
-          <a href="the-cultural-brief-sa-19-march-2026.pdf" class="archive-pdf" target="_blank">PDF</a>
+          <a href="theculturalbriefsa19march2026.pdf" class="archive-pdf" target="_blank">PDF</a>
         </li>
 
         <li>
           <span class="archive-date">12 Mar 2026</span>
           <a href="editions/12-march-2026.html" class="archive-title">Sound as Inheritance — Nduduzo Makhathini and the Cosmological Jazz</a>
-          <a href="the-cultural-brief-sa-12-march-2026.pdf" class="archive-pdf" target="_blank">PDF</a>
+          <a href="theculturalbriefsa12march2026.pdf" class="archive-pdf" target="_blank">PDF</a>
         </li>
 
         <li>
           <span class="archive-date">05 Mar 2026</span>
           <a href="editions/05-march-2026.html" class="archive-title">The Empty Room — On the Goliath Affair and the State's Idea of South Africa</a>
-          <a href="the-cultural-brief-sa-05-march-2026.md.pdf" class="archive-pdf" target="_blank">PDF</a>
+          <a href="theculturalbriefsa05march2026_md.pdf" class="archive-pdf" target="_blank">PDF</a>
         </li>
 
         <!-- ADD NEW EDITIONS ABOVE THIS LINE -->
@@ -138,11 +191,11 @@
       <div class="about-strip">
         <div>
           <h3>About this publication</h3>
-          <p>One edition, every Thursday — The Cultural Brief (SA) is a deliberately scarce South African cultural newsletter edited for seriousness, not scale. It covers the arts, literature, heritage, and cultural policy with the calm authority of a trusted colleague, never the urgency of a feed.</p>
+          <p>One edition, every Thursday — The Cultural Brief (SA) is a deliberately scarce South African cultural newsletter edited for seriousness, not scale. It covers the arts, literature, heritage, and cultural policy with the calm authority of a trusted colleague, never the urgency of a feed. <a href="about.html">Read the full manifesto &rarr;</a></p>
         </div>
         <div>
           <h3>Who it is for</h3>
-          <p>Urban working professionals, practising artists, curators, academics, and culturally serious South Africans — in-country and in the diaspora — who value signal over noise. One edition is the product. Scarcity is intentional.</p>
+          <p>Urban working professionals, practising artists, curators, academics, and culturally serious South Africans — in-country and in the diaspora — who value signal over noise. One edition is the product. Scarcity is intentional. <a href="subscribe.html">Subscribe free &rarr;</a></p>
         </div>
       </div>
 

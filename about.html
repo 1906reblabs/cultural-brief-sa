@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — The Cultural Brief (SA)</title>
+  <meta name="description" content="What The Cultural Brief (SA) is, who it is for, and why scarcity is the product."/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About — The Cultural Brief (SA)"/>
+  <meta property="og:description" content="One edition. Every Thursday. A deliberately scarce South African cultural newsletter — curated with editorial judgment, never algorithms."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://1906reblabs.github.io/cultural-brief-sa/about.html"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #1a1714;
+      --paper: #f5f2ec;
+      --muted: #7a7167;
+      --rule: #c9c3b8;
+      --accent: #2c2c2c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      line-height: 1.75;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .masthead {
+      border-bottom: 3px double var(--ink);
+      padding: 2.4rem 2rem 1.8rem;
+      text-align: center;
+      animation: fadeDown 0.9s ease both;
+    }
+
+    .masthead-nav {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+    }
+
+    .masthead-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px;
+      transition: color 0.2s;
+    }
+
+    .masthead-nav a:hover { color: var(--ink); }
+
+    .masthead h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .masthead h1 em { font-style: italic; font-weight: 400; }
+
+    .masthead-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.2rem 0 1rem;
+    }
+
+    .masthead-rule span { display: block; height: 1px; width: 60px; background: var(--rule); }
+    .masthead-rule .ornament { font-size: 0.75rem; color: var(--muted); }
+    .masthead-meta { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+
+    main { flex: 1; padding: 3.5rem 0 6rem; animation: fadeUp 0.9s ease 0.15s both; }
+
+    .page-header {
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2.4rem;
+      margin-bottom: 3rem;
+    }
+
+    .page-kicker {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+
+    .page-standfirst {
+      font-size: 1.05rem;
+      color: var(--accent);
+      font-style: italic;
+      line-height: 1.65;
+      border-left: 2px solid var(--rule);
+      padding-left: 1.2rem;
+    }
+
+    p { margin-bottom: 1.4rem; }
+
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 3.5rem 0 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .manifesto-block {
+      margin-bottom: 3rem;
+    }
+
+    .manifesto-block p {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .manifesto-block p:first-child::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      line-height: 0.85;
+      float: left;
+      margin-right: 0.1em;
+      margin-top: 0.1em;
+    }
+
+    /* Doctrine list */
+    .doctrine {
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--rule);
+      padding: 1.8rem 0;
+      margin: 3rem 0;
+    }
+
+    .doctrine-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .doctrine-col {
+      padding: 1.2rem 0;
+    }
+
+    .doctrine-col + .doctrine-col {
+      border-left: 1px solid var(--rule);
+      padding-left: 2rem;
+    }
+
+    .doctrine-col h3 {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .doctrine-col ul {
+      list-style: none;
+    }
+
+    .doctrine-col ul li {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--ink);
+      padding: 0.25rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .doctrine-col ul li:last-child { border-bottom: none; }
+
+    /* Audience */
+    .audience-block {
+      margin-bottom: 3rem;
+    }
+
+    .audience-block p { font-size: 1rem; }
+
+    /* CTA */
+    .cta-block {
+      text-align: center;
+      padding: 3rem 0;
+      border-top: 3px double var(--ink);
+      margin-top: 4rem;
+    }
+
+    .cta-block p {
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+      font-size: 0.95rem;
+    }
+
+    .cta-link {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 3px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .cta-link:hover { color: var(--muted); border-color: var(--muted); }
+
+    .cta-secondary {
+      display: inline-block;
+      margin-left: 2rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 3px;
+      transition: color 0.2s;
+    }
+
+    .cta-secondary:hover { color: var(--ink); }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer p { font-family: 'EB Garamond', serif; font-style: italic; font-size: 0.85rem; color: var(--muted); }
+    footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--rule); }
+    footer a:hover { color: var(--ink); }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .masthead { padding: 1.8rem 1.2rem 1.4rem; }
+      .container { padding: 0 1.2rem; }
+      .doctrine-row { grid-template-columns: 1fr; }
+      .doctrine-col + .doctrine-col { border-left: none; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 1.2rem; }
+      .cta-secondary { display: block; margin-left: 0; margin-top: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container">
+    <p class="masthead-nav"><a href="index.html">&larr; All Editions</a></p>
+    <h1>The Cultural Brief <em>(SA)</em></h1>
+    <div class="masthead-rule">
+      <span></span>
+      <span class="ornament">&#10022;</span>
+      <span></span>
+    </div>
+    <p class="masthead-meta">South Africa &nbsp;·&nbsp; Cultural Intelligence</p>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="page-header">
+      <p class="page-kicker">About</p>
+      <h2 class="page-title">What this is, who it is for, and why scarcity is the product</h2>
+      <p class="page-standfirst">The Cultural Brief (SA) is a weekly newsletter covering South African arts and cultural life — edited with judgment, published with restraint, and built on the conviction that the most useful thing a cultural publication can do is decide what to leave out.</p>
+    </div>
+
+    <div class="manifesto-block">
+
+      <p>South Africa's cultural life is richer, more contested, and more intellectually serious than most of its coverage suggests. The festivals happen. The books are published. The exhibitions open. The policy decisions are made. The debates proceed. Most of this activity is covered in ways that flatten it — either toward noise (what's on, where to go, who attended) or toward anxiety (what the government is failing, what the institutions lack). Neither register produces the kind of cultural intelligence that a serious reader can actually use.</p>
+
+      <p>The Cultural Brief was built to occupy different ground. One edition, every Thursday morning, curated by a single editorial intelligence rather than assembled by algorithm or volume. The selection process is simple: each item must justify its inclusion on the grounds of cultural weight, intellectual depth, and editorial necessity. If it felt optional, it was cut.</p>
+
+      <p>The long essay — one per edition, 800 to 1500 words — is the heart of the publication. It is where the week's events become an argument. Not a think-piece, not a hot take: an essay, in the tradition of an essay, which means a form that thinks out loud and arrives somewhere it did not know it was going when it began.</p>
+
+      <p>The dispatches are deliberately few. The closing reflection is deliberately short. The opening quote is chosen the way you choose an epigraph — not for decoration, but because it reorients the reader's thinking before the edition begins. None of this happens by accident. All of it is the product of editorial decision rather than production volume.</p>
+
+    </div>
+
+    <div class="doctrine">
+      <div class="doctrine-row">
+        <div class="doctrine-col">
+          <h3>What this is</h3>
+          <ul>
+            <li>Curated, not aggregated</li>
+            <li>Analytical, not promotional</li>
+            <li>Scarce by design</li>
+            <li>One trusted voice, weekly</li>
+            <li>Built for re-reading</li>
+          </ul>
+        </div>
+        <div class="doctrine-col">
+          <h3>What this is not</h3>
+          <ul>
+            <li>A "what's on" listings guide</li>
+            <li>A daily or breaking-news feed</li>
+            <li>Content marketing</li>
+            <li>Algorithm-optimised</li>
+            <li>Available to sponsors as content</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Who it is for</p>
+
+    <div class="audience-block">
+      <p>The Cultural Brief is written for urban working professionals, practising artists, curators, academics, and culturally serious South Africans — in the country and in the diaspora — who have reached the point of preferring one trusted, carefully edited source to the volume of what is available.</p>
+
+      <p>The editorial test is simple: would this earn the trust of a serious 38-year-old Johannesburg curator or Cape Town academic in the diaspora? If the answer is no — if the sentence is padded, the inclusion is optional, or the framing is promotional — it does not appear. The publication does not explain itself to casual readers. It assumes competence, rewards attention, and asks nothing of its readers except that they take the hour it requires.</p>
+
+      <p>Tourists, influencers, and casual entertainment consumers will find the publication of limited use. This is intentional. The audience is not large by design. The publication is not trying to grow into something else.</p>
+    </div>
+
+    <p class="section-label">Cultural partnerships</p>
+
+    <div class="manifesto-block">
+      <p>The Cultural Brief accepts a small number of cultural partnerships per year — not advertising, and not sponsored content. A cultural partner is an organisation whose work is genuinely aligned with the publication's values and audience: arts institutions, independent publishers, galleries, foundations, and cultural organisations whose activities the editorial team would cover regardless of the commercial relationship.</p>
+
+      <p>Partners receive a single, clearly identified line at the end of the edition — not embedded in editorial content, not mistaken for curation. One partner per quarter, per category. The rate reflects the audience's quality, not its scale: a small number of highly engaged, culturally serious readers is worth more to the right partner than a large number of passive subscribers.</p>
+
+      <p>Enquiries from organisations whose work meets this standard are welcome at the address below.</p>
+    </div>
+
+    <div class="cta-block">
+      <p><em>One edition. Every Thursday at 08:00 SAST. Free to read. Simple to subscribe.</em></p>
+      <a href="subscribe.html" class="cta-link">Subscribe &rarr;</a>
+      <a href="index.html" class="cta-secondary">Read the archive &rarr;</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>The Cultural Brief (SA) &nbsp;·&nbsp; <a href="https://1906reblabs.github.io/cultural-brief-sa/">1906reblabs.github.io/cultural-brief-sa</a></p>
+</footer>
+
+</body>
+</html>

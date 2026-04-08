@@ -1,0 +1,63 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply" result="noisy"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f5f2ec"/>
+
+  <!-- Noise texture -->
+  <rect width="1200" height="630" fill="#f5f2ec" filter="url(#noise)" opacity="0.04"/>
+
+  <!-- Top border -->
+  <line x1="60" y1="60" x2="1140" y2="60" stroke="#1a1714" stroke-width="2"/>
+  <line x1="60" y1="66" x2="1140" y2="66" stroke="#1a1714" stroke-width="0.75"/>
+
+  <!-- Bottom border -->
+  <line x1="60" y1="564" x2="1140" y2="564" stroke="#c9c3b8" stroke-width="1"/>
+  <line x1="60" y1="570" x2="1140" y2="570" stroke="#1a1714" stroke-width="2"/>
+  <line x1="60" y1="576" x2="1140" y2="576" stroke="#1a1714" stroke-width="0.75"/>
+
+  <!-- Eyebrow -->
+  <text x="600" y="115" font-family="Georgia, serif" font-size="14" fill="#7a7167"
+        letter-spacing="5" text-anchor="middle" font-style="normal">
+    SOUTH AFRICA · CULTURAL INTELLIGENCE
+  </text>
+
+  <!-- Rule line left -->
+  <line x1="300" y1="145" x2="520" y2="145" stroke="#c9c3b8" stroke-width="1"/>
+  <!-- Ornament -->
+  <text x="600" y="150" font-family="Georgia, serif" font-size="14" fill="#7a7167"
+        text-anchor="middle">✦</text>
+  <!-- Rule line right -->
+  <line x1="680" y1="145" x2="900" y2="145" stroke="#c9c3b8" stroke-width="1"/>
+
+  <!-- Main title -->
+  <text x="600" y="270" font-family="Georgia, serif" font-size="78" font-weight="700"
+        fill="#1a1714" text-anchor="middle" letter-spacing="-1">
+    The Cultural Brief
+  </text>
+  <text x="600" y="355" font-family="Georgia, serif" font-size="62" font-weight="400"
+        font-style="italic" fill="#1a1714" text-anchor="middle">
+    (SA)
+  </text>
+
+  <!-- Divider -->
+  <line x1="200" y1="400" x2="1000" y2="400" stroke="#c9c3b8" stroke-width="1"/>
+
+  <!-- Tagline -->
+  <text x="600" y="445" font-family="Georgia, serif" font-size="18" fill="#7a7167"
+        font-style="italic" text-anchor="middle">
+    Curated with editorial judgment, never algorithms.
+  </text>
+
+  <!-- Meta -->
+  <text x="600" y="520" font-family="Georgia, serif" font-size="13" fill="#7a7167"
+        letter-spacing="4" text-anchor="middle">
+    ONE EDITION · EVERY THURSDAY · 08:00 SAST
+  </text>
+</svg>
