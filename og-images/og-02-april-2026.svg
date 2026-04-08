@@ -16,27 +16,27 @@
 
   <!-- Date top-right -->
   <text x="1120" y="100" font-family="Georgia, serif" font-size="13" fill="#7a7167"
-        letter-spacing="2" text-anchor="end">8 APRIL 2026</text>
+        letter-spacing="2" text-anchor="end">2 APRIL 2026</text>
 
   <!-- Horizontal rule under eyebrow -->
   <line x1="80" y1="116" x2="1120" y2="116" stroke="#c9c3b8" stroke-width="1"/>
 
   <!-- Essay title — large, italic, serif -->
   <text x="80" y="215" font-family="Georgia, serif" font-size="62" font-weight="700"
-        font-style="italic" fill="#1a1714">The City as Canvas</text>
+        font-style="italic" fill="#1a1714">In Minor Keys</text>
   <text x="80" y="290" font-family="Georgia, serif" font-size="40" font-weight="400"
-        font-style="italic" fill="#1a1714">Public Space, Light, and</text>
+        font-style="italic" fill="#1a1714">Koyo Kouoh's Unfinished Biennale,</text>
   <text x="80" y="340" font-family="Georgia, serif" font-size="40" font-weight="400"
-        font-style="italic" fill="#1a1714">Who the Street Belongs To</text>
+        font-style="italic" fill="#1a1714">and What South Africa Does With the Gift</text>
 
   <!-- Divider -->
   <line x1="80" y1="378" x2="480" y2="378" stroke="#1a1714" stroke-width="1.5"/>
 
   <!-- Essay standfirst -->
   <text x="80" y="420" font-family="Georgia, serif" font-size="18" fill="#7a7167"
-        font-style="italic">On LUMENOCITY, the Company's Garden,</text>
+        font-style="italic">On the Venice Biennale, a posthumous curatorial vision,</text>
   <text x="80" y="448" font-family="Georgia, serif" font-size="18" fill="#7a7167"
-        font-style="italic">and the slow argument about what public space is for.</text>
+        font-style="italic">and the question of inheritance.</text>
 
   <!-- Bottom label -->
   <text x="80" y="542" font-family="Georgia, serif" font-size="13" fill="#c9c3b8"
