@@ -26,7 +26,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 18px; scroll-behavior: smooth; }
+    html { font-size: 18px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
     body {
       background-color: var(--paper);
@@ -36,6 +36,7 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      overflow-x: hidden;
     }
 
     body::before {
@@ -302,6 +303,10 @@
       .doctrine-row { grid-template-columns: 1fr; }
       .doctrine-col + .doctrine-col { border-left: none; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 1.2rem; }
       .cta-secondary { display: block; margin-left: 0; margin-top: 1rem; }
+      .masthead-nav a, .cta-link, .cta-secondary { min-height: 44px; display: inline-flex; align-items: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }
   </style>
 </head>
@@ -395,9 +400,15 @@
   </div>
 </main>
 
-<footer>
-  <p>The Cultural Brief (SA) &nbsp;·&nbsp; <a href="https://1906reblabs.github.io/cultural-brief-sa/">1906reblabs.github.io/cultural-brief-sa</a></p>
+<footer style="border-top:1px solid var(--rule);padding:2rem;text-align:center;position:relative;z-index:1;">
+  <p style="font-family:'EB Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--muted);"><em>One edition. Every Thursday. Thank you for reading.</em></p>
+  <nav style="margin-top:0.8rem;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;" aria-label="Footer navigation">
+    <a href="index.html" style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;transition:color 0.2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--muted)'">Archive</a>
+    <a href="subscribe.html" style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;transition:color 0.2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--muted)'">Subscribe</a>
+    <a href="privacy.html" style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;transition:color 0.2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
+  </nav>
 </footer>
 
+<script src="cookie-consent.js"></script>
 </body>
 </html>

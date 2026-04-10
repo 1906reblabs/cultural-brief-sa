@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy &amp; Cookie Policy — The Cultural Brief (SA)</title>
+  <meta name="description" content="Privacy and cookie policy for The Cultural Brief (SA). What data we collect, why, and your rights under POPIA."/>
+  <meta property="og:title" content="Privacy &amp; Cookie Policy — The Cultural Brief (SA)"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://1906reblabs.github.io/cultural-brief-sa/privacy.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1714;--paper:#f5f2ec;--muted:#7a7167;--rule:#c9c3b8;--accent:#2c2c2c;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:18px;scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+    body{background-color:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;line-height:1.75;min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.5;}
+    .container{max-width:680px;margin:0 auto;padding:0 2rem;width:100%;position:relative;z-index:1;}
+    .masthead{border-bottom:3px double var(--ink);padding:2.4rem 2rem 1.8rem;text-align:center;animation:fadeDown 0.7s ease both;}
+    .masthead-nav{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem;}
+    .masthead-nav a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;transition:color 0.2s;}
+    .masthead-nav a:hover{color:var(--ink);}
+    .masthead h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);font-weight:700;letter-spacing:-0.01em;line-height:1.1;color:var(--ink);}
+    .masthead h1 em{font-style:italic;font-weight:400;}
+    .masthead-rule{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1.2rem 0 1rem;}
+    .masthead-rule span{display:block;height:1px;width:60px;background:var(--rule);}
+    .masthead-rule .ornament{font-size:0.75rem;color:var(--muted);}
+    .masthead-meta{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);}
+    main{flex:1;padding:3.5rem 0 6rem;animation:fadeUp 0.7s ease 0.1s both;}
+    .page-header{border-bottom:1px solid var(--rule);padding-bottom:2.4rem;margin-bottom:3rem;}
+    .page-kicker{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
+    .page-title{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:400;font-style:italic;line-height:1.2;color:var(--ink);margin-bottom:1rem;}
+    .page-meta{font-size:0.78rem;color:var(--muted);font-style:italic;}
+    /* Section headings */
+    h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--ink);margin:3rem 0 0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--rule);}
+    h3{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;font-weight:400;color:var(--ink);margin:1.6rem 0 0.5rem;}
+    p{margin-bottom:1.2rem;font-size:0.98rem;}
+    ul,ol{margin:0.5rem 0 1.2rem 1.4rem;}
+    li{font-size:0.98rem;margin-bottom:0.4rem;line-height:1.65;}
+    a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);transition:border-color 0.2s;}
+    a:hover{border-bottom-color:var(--ink);}
+    /* Definition table */
+    .def-table{width:100%;border-collapse:collapse;margin:1rem 0 1.4rem;}
+    .def-table td{padding:0.6rem 0;vertical-align:top;font-size:0.95rem;border-bottom:1px solid var(--rule);}
+    .def-table td:first-child{font-weight:600;width:38%;padding-right:1.2rem;color:var(--accent);}
+    /* Highlight box */
+    .notice-box{border-left:2px solid var(--ink);padding:1rem 1.2rem;margin:1.6rem 0;background:transparent;}
+    .notice-box p{margin:0;font-style:italic;font-size:0.95rem;color:var(--accent);}
+    /* Cookie reset button */
+    .reset-consent{display:inline-block;margin-top:0.5rem;font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--rule);padding:0.45rem 1rem;cursor:pointer;font-family:'EB Garamond',Georgia,serif;transition:all 0.2s;}
+    .reset-consent:hover{color:var(--ink);border-color:var(--ink);}
+    /* Footer */
+    .site-footer{border-top:1px solid var(--rule);padding:2rem;text-align:center;position:relative;z-index:1;}
+    .site-footer p{font-family:'EB Garamond',serif;font-style:italic;font-size:0.85rem;color:var(--muted);}
+    .site-footer a{color:var(--muted);border-bottom:1px solid var(--rule);}
+    .site-footer nav{margin-top:0.8rem;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;}
+    .site-footer nav a{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;}
+    .site-footer nav a:hover{color:var(--ink);}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-12px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+    @media(max-width:600px){
+      .masthead{padding:1.8rem 1.2rem 1.4rem;}
+      .container{padding:0 1.2rem;}
+      .def-table td:first-child{width:42%;}
+    }
+    @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container">
+    <p class="masthead-nav"><a href="index.html">&larr; All Editions</a></p>
+    <h1>The Cultural Brief <em>(SA)</em></h1>
+    <div class="masthead-rule"><span></span><span class="ornament">&#10022;</span><span></span></div>
+    <p class="masthead-meta">South Africa &nbsp;·&nbsp; Cultural Intelligence</p>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="page-header">
+      <p class="page-kicker">Legal &nbsp;·&nbsp; Privacy</p>
+      <h1 class="page-title">Privacy &amp; Cookie Policy</h1>
+      <p class="page-meta">Last updated: April 2026 &nbsp;·&nbsp; Governed by the laws of the Republic of South Africa</p>
+    </div>
+
+    <div class="notice-box">
+      <p>This policy is short, plain-language, and complete. It tells you exactly what data this website and newsletter collects, why, and what your rights are under the Protection of Personal Information Act 4 of 2013 (POPIA).</p>
+    </div>
+
+    <!-- ── 1. WHO WE ARE ──────────────────────────────────────────────── -->
+    <h2>1. Who we are</h2>
+    <p><strong>The Cultural Brief (SA)</strong> is a weekly editorial newsletter covering South African arts and cultural life. It is published by <strong>Simphiwe Mlotshwa</strong>, a natural person operating as a sole publisher ("we", "us", "our").</p>
+    <table class="def-table">
+      <tr><td>Publication</td><td>The Cultural Brief (SA)</td></tr>
+      <tr><td>Publisher</td><td>Simphiwe Mlotshwa</td></tr>
+      <tr><td>Website</td><td>1906reblabs.github.io/cultural-brief-sa</td></tr>
+      <tr><td>Newsletter platform</td><td>Substack (simphiwemlotshwa.substack.com)</td></tr>
+      <tr><td>Responsible party (POPIA)</td><td>Simphiwe Mlotshwa</td></tr>
+      <tr><td>Contact</td><td>Via reply to any newsletter edition, or via the Substack publication page</td></tr>
+    </table>
+
+    <!-- ── 2. WHAT DATA WE COLLECT ────────────────────────────────────── -->
+    <h2>2. What personal information we collect and why</h2>
+
+    <h3>2.1 Newsletter subscribers</h3>
+    <p>If you subscribe via Substack, Substack collects your email address on our behalf. We use it solely to deliver The Cultural Brief (SA) to your inbox every Thursday. We do not sell, rent, or share your email address with any third party. We do not use it for any purpose other than delivering the newsletter.</p>
+    <p>Substack may collect additional data (IP address at subscription, device type, open and click rates) for their platform analytics. Substack's own <a href="https://substack.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> governs their data practices. We have no access to individual open or click data per subscriber.</p>
+
+    <h3>2.2 Website visitors</h3>
+    <p>This website is hosted on GitHub Pages. GitHub may collect server logs including IP addresses as part of their infrastructure operations. Their <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Privacy Statement</a> governs this. We do not operate any server-side analytics, tracking pixels, or visitor identification systems on this site.</p>
+    <p>We do not use Google Analytics, Meta Pixel, or any third-party analytics or advertising tracking on this website.</p>
+
+    <h3>2.3 Cultural partnership enquiries</h3>
+    <p>If you contact us about a cultural partnership, we collect the contact information you provide (name, email, organisation) solely for the purpose of responding to your enquiry and administering any resulting partnership agreement. This information is stored securely and not shared with third parties.</p>
+
+    <!-- ── 3. COOKIES ─────────────────────────────────────────────────── -->
+    <h2>3. Cookies and local storage</h2>
+
+    <h3>3.1 What this site sets</h3>
+    <p>This website sets one item in your browser's <strong>localStorage</strong> (not a cookie) to record your response to the consent notice:</p>
+    <table class="def-table">
+      <tr><td>Key</td><td><code>tcbsa_consent_v1</code></td></tr>
+      <tr><td>Value</td><td>"accepted" or "declined"</td></tr>
+      <tr><td>Purpose</td><td>Remembers whether you have responded to the privacy notice so it is not shown again</td></tr>
+      <tr><td>Expires</td><td>Persists until you clear your browser storage or use the reset button below</td></tr>
+      <tr><td>Shared with third parties</td><td>No</td></tr>
+    </table>
+    <p>localStorage is stored entirely on your device. It is not transmitted to any server by this website.</p>
+
+    <h3>3.2 Third-party cookies set by services we use</h3>
+    <p><strong>Google Fonts</strong> — This site loads typefaces from Google Fonts (fonts.googleapis.com and fonts.gstatic.com). This causes your browser to make a request to Google's servers, which may set cookies and will log your IP address. Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> applies. If you prefer not to load Google Fonts, you can disable them in your browser settings — the site will fall back to Georgia and system serif fonts.</p>
+    <p><strong>Substack</strong> — The subscribe page links to Substack. If you click through to Substack, their cookie and tracking practices apply from that point. We do not embed Substack iframes or widgets on this site.</p>
+    <p>No advertising cookies, retargeting pixels, social media tracking scripts, or third-party analytics tools are loaded on this website.</p>
+
+    <h3>3.3 Resetting your consent</h3>
+    <p>You can withdraw your consent record at any time. Clicking the button below clears the localStorage entry and will show the consent notice again on your next visit.</p>
+    <button class="reset-consent" id="resetConsent" type="button">Reset consent record</button>
+
+    <!-- ── 4. LEGAL BASIS ─────────────────────────────────────────────── -->
+    <h2>4. Legal basis for processing (POPIA)</h2>
+    <p>Under POPIA, we process personal information on the following bases:</p>
+    <ul>
+      <li><strong>Consent</strong> — newsletter subscription (you actively subscribe via Substack).</li>
+      <li><strong>Legitimate interest</strong> — responding to partnership enquiries and administering partnership agreements.</li>
+      <li><strong>Legal obligation</strong> — retaining records required by South African tax and contract law.</li>
+    </ul>
+    <p>We do not process any special personal information as defined in section 26 of POPIA (race, ethnicity, health, religion, trade union membership, political views, criminal record, biometric data, or sexual orientation).</p>
+
+    <!-- ── 5. YOUR RIGHTS ─────────────────────────────────────────────── -->
+    <h2>5. Your rights under POPIA</h2>
+    <p>As a data subject under POPIA, you have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of personal information we hold about you.</li>
+      <li><strong>Correction</strong> — request correction of inaccurate or incomplete information.</li>
+      <li><strong>Deletion</strong> — request deletion of your personal information, subject to legal retention requirements.</li>
+      <li><strong>Objection</strong> — object to the processing of your personal information.</li>
+      <li><strong>Withdrawal of consent</strong> — unsubscribe from the newsletter at any time using the unsubscribe link in any edition, or directly through Substack. Withdrawal does not affect the lawfulness of processing before withdrawal.</li>
+      <li><strong>Complaint</strong> — lodge a complaint with the <strong>Information Regulator of South Africa</strong> if you believe your rights have been infringed.</li>
+    </ul>
+
+    <h3>Information Regulator contact details</h3>
+    <table class="def-table">
+      <tr><td>Website</td><td><a href="https://www.inforegulator.org.za" target="_blank" rel="noopener">inforegulator.org.za</a></td></tr>
+      <tr><td>Email (complaints)</td><td>inforeg@justice.gov.za</td></tr>
+      <tr><td>Address</td><td>JD House, 27 Stiemens Street, Braamfontein, Johannesburg, 2001</td></tr>
+    </table>
+    <p>To exercise any right, contact us by replying to any newsletter edition or via the Substack publication page. We will respond within 30 days as required by POPIA.</p>
+
+    <!-- ── 6. DATA RETENTION ──────────────────────────────────────────── -->
+    <h2>6. Data retention</h2>
+    <p>We retain subscriber email addresses for as long as you remain subscribed. Upon unsubscription, Substack's data retention policies apply to their records. Partnership enquiry and agreement records are retained for a minimum of five years in compliance with South African contract and tax law requirements. Web server logs held by GitHub are subject to GitHub's own retention schedule.</p>
+
+    <!-- ── 7. DATA SECURITY ───────────────────────────────────────────── -->
+    <h2>7. Data security</h2>
+    <p>This is a static website with no database or server-side user data storage. Personal information provided in connection with partnerships is handled via encrypted email. Newsletter subscriber data is held and secured by Substack under their enterprise security practices. We do not store subscriber personal information on any system we directly control beyond what is visible in the Substack publisher dashboard.</p>
+
+    <!-- ── 8. TRANSFERS OUTSIDE SA ────────────────────────────────────── -->
+    <h2>8. Cross-border transfers</h2>
+    <p>Substack is a US-based company. Your email address and newsletter subscription data are stored on servers outside South Africa. This transfer is necessary for the provision of the newsletter service. Substack's contractual frameworks and privacy practices are the applicable safeguards. GitHub Pages is also US-hosted. By using this site and subscribing to the newsletter, you acknowledge that your data may be processed outside South Africa in accordance with section 72 of POPIA.</p>
+
+    <!-- ── 9. CHILDREN ────────────────────────────────────────────────── -->
+    <h2>9. Children</h2>
+    <p>This publication is directed at adult professionals and is not intended for persons under 18. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, contact us and we will delete it promptly.</p>
+
+    <!-- ── 10. CHANGES ────────────────────────────────────────────────── -->
+    <h2>10. Changes to this policy</h2>
+    <p>We may update this policy from time to time to reflect changes in our practices or applicable law. The date at the top of this page reflects the most recent revision. Material changes will be noted in the relevant newsletter edition. Continued use of the site or newsletter after a change constitutes acceptance of the updated policy.</p>
+
+    <!-- ── 11. CONTACT ────────────────────────────────────────────────── -->
+    <h2>11. Contact</h2>
+    <p>For any privacy-related queries, to exercise your rights, or to make a complaint, contact us by replying to any edition of The Cultural Brief (SA) on Substack, or via the <a href="https://simphiwemlotshwa.substack.com" target="_blank" rel="noopener">Substack publication page</a>. We do not publish a direct email address on the website to reduce spam exposure — a reply to any edition reaches us directly.</p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p><em>One edition. Every Thursday. Thank you for reading.</em></p>
+  <nav>
+    <a href="index.html">Archive</a>
+    <a href="about.html">About</a>
+    <a href="subscribe.html">Subscribe</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+</footer>
+
+<script src="cookie-consent.js"></script>
+<script>
+  document.getElementById('resetConsent').addEventListener('click', function() {
+    try {
+      localStorage.removeItem('tcbsa_consent_v1');
+      localStorage.removeItem('tcbsa_consent_date');
+    } catch(e) {}
+    this.textContent = 'Consent record cleared — notice will reappear on next visit';
+    this.disabled = true;
+    this.style.opacity = '0.5';
+  });
+</script>
+
+</body>
+</html>

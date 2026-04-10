@@ -19,8 +19,8 @@
   <style>
     :root { --ink:#1a1714; --paper:#f5f2ec; --muted:#7a7167; --rule:#c9c3b8; --accent:#2c2c2c; }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{font-size:18px;scroll-behavior:smooth;}
-    body{background-color:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;line-height:1.75;min-height:100vh;display:flex;flex-direction:column;}
+    html{font-size:18px;scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+    body{background-color:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;line-height:1.75;min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;}
     body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.5;}
     .container{max-width:640px;margin:0 auto;padding:0 2rem;width:100%;position:relative;z-index:1;}
     .masthead{border-bottom:3px double var(--ink);padding:2.4rem 2rem 1.8rem;text-align:center;animation:fadeDown 0.9s ease both;}
@@ -76,7 +76,9 @@
       .container{padding:0 1.2rem;}
       .promise-grid{grid-template-columns:1fr;gap:1.8rem;}
       .substack-cta-block{padding:2rem 1.2rem;}
+      .substack-button{min-height:44px;display:inline-flex;align-items:center;}
     }
+    @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
   </style>
 </head>
 <body>
@@ -175,9 +177,15 @@
   </div>
 </main>
 
-<footer>
-  <p>The Cultural Brief (SA) is published weekly at <a href="https://1906reblabs.github.io/cultural-brief-sa/">1906reblabs.github.io/cultural-brief-sa</a></p>
+<footer style="border-top:1px solid var(--rule);padding:2rem;text-align:center;position:relative;z-index:1;">
+  <p style="font-family:'EB Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--muted);"><em>One edition. Every Thursday. Thank you for reading.</em></p>
+  <nav style="margin-top:0.8rem;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;" aria-label="Footer navigation">
+    <a href="index.html" style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;">Archive</a>
+    <a href="about.html" style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;">About</a>
+    <a href="privacy.html" style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;">Privacy Policy</a>
+  </nav>
 </footer>
 
+<script src="cookie-consent.js"></script>
 </body>
 </html>
