@@ -1,0 +1,48 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f5f2ec"/>
+
+  <!-- Top double rule -->
+  <line x1="52" y1="52" x2="1148" y2="52" stroke="#1a1714" stroke-width="2.5"/>
+  <line x1="52" y1="59" x2="1148" y2="59" stroke="#1a1714" stroke-width="1"/>
+
+  <!-- Bottom double rule -->
+  <line x1="52" y1="571" x2="1148" y2="571" stroke="#1a1714" stroke-width="1"/>
+  <line x1="52" y1="578" x2="1148" y2="578" stroke="#1a1714" stroke-width="2.5"/>
+
+  <!-- Pub name top-left -->
+  <text x="80" y="100" font-family="Georgia, serif" font-size="13" fill="#7a7167"
+        letter-spacing="3" font-style="normal">THE CULTURAL BRIEF (SA)</text>
+
+  <!-- Date top-right -->
+  <text x="1120" y="100" font-family="Georgia, serif" font-size="13" fill="#7a7167"
+        letter-spacing="2" text-anchor="end">26 MARCH 2026</text>
+
+  <!-- Horizontal rule under eyebrow -->
+  <line x1="80" y1="116" x2="1120" y2="116" stroke="#c9c3b8" stroke-width="1"/>
+
+  <!-- Essay title — large, italic, serif -->
+  <text x="80" y="215" font-family="Georgia, serif" font-size="62" font-weight="700"
+        font-style="italic" fill="#1a1714">The Festival and the Language</text>
+  <text x="80" y="290" font-family="Georgia, serif" font-size="40" font-weight="400"
+        font-style="italic" fill="#1a1714">What the KKNK Owes</text>
+  <text x="80" y="340" font-family="Georgia, serif" font-size="40" font-weight="400"
+        font-style="italic" fill="#1a1714">the Afrikaans It Was Built On</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="378" x2="480" y2="378" stroke="#1a1714" stroke-width="1.5"/>
+
+  <!-- Essay standfirst -->
+  <text x="80" y="420" font-family="Georgia, serif" font-size="18" fill="#7a7167"
+        font-style="italic">Thirty-one years in Oudtshoorn. The gap between</text>
+  <text x="80" y="448" font-family="Georgia, serif" font-size="18" fill="#7a7167"
+        font-style="italic">intention and institutional culture.</text>
+
+  <!-- Bottom label -->
+  <text x="80" y="542" font-family="Georgia, serif" font-size="13" fill="#c9c3b8"
+        letter-spacing="4">ONE EDITION · EVERY THURSDAY · 08:00 SAST</text>
+
+  <!-- Right ornament -->
+  <text x="1060" y="340" font-family="Georgia, serif" font-size="90" fill="#e8e4dc"
+        text-anchor="middle" font-style="italic">✦</text>
+</svg>
