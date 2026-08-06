@@ -23,7 +23,6 @@
     body{background-color:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;line-height:1.7;min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;}
     body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.5;}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-    /* MASTHEAD */
     .masthead{border-bottom:3px double var(--ink);padding:clamp(1.6rem,5vw,3rem) clamp(1rem,4vw,2rem) clamp(1.2rem,3vw,2rem);text-align:center;position:relative;animation:fadeDown 0.9s ease both;}
     .masthead-eyebrow{font-family:'EB Garamond',serif;font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem;}
     .masthead h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,6vw,4.2rem);font-weight:700;letter-spacing:-0.01em;line-height:1.1;color:var(--ink);}
@@ -33,21 +32,19 @@
     .masthead-rule .ornament{width:auto;font-size:0.8rem;color:var(--muted);letter-spacing:0.15em;}
     .masthead-tagline{font-family:'EB Garamond',serif;font-style:italic;font-size:1rem;color:var(--muted);max-width:480px;margin:0 auto;}
     .masthead-meta{margin-top:1.6rem;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);}
+    .masthead-count{margin-top:0.5rem;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);}
     .masthead-links{margin-top:1.2rem;display:flex;justify-content:center;gap:clamp(1rem,3vw,2rem);flex-wrap:wrap;}
     .masthead-links a{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;display:inline-flex;align-items:center;min-height:var(--tap);}
     .masthead-links a:hover{color:var(--ink);border-color:var(--ink);}
     .masthead-links a.subscribe-nav{color:var(--ink);border-color:var(--ink);}
-    /* LAYOUT */
     .container{max-width:760px;margin:0 auto;padding:0 clamp(1rem,4vw,2rem);width:100%;position:relative;z-index:1;}
     main{flex:1;padding:clamp(2rem,5vw,4rem) 0 6rem;animation:fadeUp 0.9s ease 0.2s both;}
     .section-label{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem;}
     .section-label::after{content:'';flex:1;height:1px;background:var(--rule);}
-    /* SUBSCRIBE STRIP */
     .subscribe-strip{border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:1.6rem 0;margin-bottom:4rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
     .subscribe-strip p{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--ink);line-height:1.5;flex:1;min-width:200px;}
     .subscribe-strip-cta{display:inline-flex;align-items:center;min-height:var(--tap);padding:0 1.4rem;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--paper);background:var(--ink);text-decoration:none;transition:background 0.2s;white-space:nowrap;}
     .subscribe-strip-cta:hover{background:#3a3330;}
-    /* FEATURE EDITION */
     .feature-edition{border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:2.8rem 0 2.4rem;margin-bottom:4rem;}
     .feature-edition .edition-label{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
     .feature-edition h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2.4rem);font-weight:400;font-style:italic;line-height:1.25;margin-bottom:1.2rem;color:var(--ink);}
@@ -57,7 +54,6 @@
     .read-link:hover{color:var(--muted);border-color:var(--muted);}
     .pdf-link{display:inline-flex;align-items:center;min-height:var(--tap);font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
     .pdf-link:hover{color:var(--ink);border-color:var(--ink);}
-    /* SEARCH + FILTER */
     .archive-controls{display:flex;gap:0.8rem;align-items:stretch;margin-bottom:1.6rem;flex-wrap:wrap;}
     .archive-search-wrap{flex:1;min-width:160px;position:relative;display:flex;}
     .archive-search{width:100%;min-height:var(--tap);padding:0 0.9rem 0 2.6rem;font-family:'EB Garamond',Georgia,serif;font-size:0.92rem;color:var(--ink);background:var(--paper);border:1px solid var(--rule);outline:none;transition:border-color 0.2s;-webkit-appearance:none;appearance:none;border-radius:0;}
@@ -69,7 +65,6 @@
     .filter-tag:hover{color:var(--ink);border-color:var(--ink);}
     .filter-tag.active{color:var(--paper);background:var(--ink);border-color:var(--ink);}
     .archive-empty{padding:2rem 0;font-style:italic;color:var(--muted);font-size:0.95rem;display:none;}
-    /* ARCHIVE LIST */
     .archive-list{list-style:none;}
     .archive-list li{border-bottom:1px solid var(--rule);padding:clamp(1rem,2vw,1.4rem) 0;display:grid;grid-template-columns:100px 1fr auto;gap:1rem;align-items:start;}
     .archive-list li:first-child{border-top:1px solid var(--rule);}
@@ -81,13 +76,11 @@
     .archive-tag{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);padding:0.1rem 0.4rem;}
     .archive-pdf{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px;white-space:nowrap;min-height:var(--tap);display:inline-flex;align-items:center;padding-top:0.25rem;}
     .archive-pdf:hover{color:var(--ink);border-color:var(--ink);}
-    /* ABOUT STRIP */
     .about-strip{margin-top:5rem;padding-top:2.4rem;border-top:3px double var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
     .about-strip h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;font-weight:400;margin-bottom:0.8rem;color:var(--ink);}
     .about-strip p{font-size:0.88rem;color:var(--muted);line-height:1.7;}
     .about-strip a{color:var(--muted);border-bottom:1px solid var(--rule);text-decoration:none;}
     .about-strip a:hover{color:var(--ink);}
-    /* FOOTER */
     .site-footer{border-top:1px solid var(--rule);padding:2rem;text-align:center;position:relative;z-index:1;}
     .site-footer>p{font-family:'EB Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--muted);}
     .site-footer nav{margin-top:0.8rem;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;}
@@ -116,6 +109,7 @@
       <div class="masthead-rule"><span></span><span class="ornament">&#10022;</span><span></span></div>
       <p class="masthead-tagline">Curated and contextualised South African arts and cultural activity — with editorial judgment, never algorithms.</p>
       <p class="masthead-meta">Published every Thursday at 08:00 SAST</p>
+      <p class="masthead-count">22 editions published since 5 March 2026</p>
       <nav class="masthead-links" aria-label="Site navigation">
         <a href="about.html">About</a>
         <a href="subscribe.html" class="subscribe-nav">Subscribe &rarr;</a>
@@ -131,18 +125,18 @@
         <a href="subscribe.html" class="subscribe-strip-cta">Subscribe free &rarr;</a>
       </div>
 
-      <!-- Latest edition feature — auto-generated from newest content file -->
+      <!-- LATEST EDITION FEATURE — updated 30 July 2026 -->
       <div class="feature-edition">
-        <p class="edition-label">Latest Edition &nbsp;·&nbsp; 25 June 2026</p>
-        <h2>What the Fringe Holds: On the National Arts Festival Opening, the Freedom That Comes Before Permission, and What 2026 Made</h2>
-        <p class="standfirst">The National Arts Festival opens today in Makhanda. Four editions of advance notice have reached their occasion. The fringe — where the decade's significant new South African theatre first becomes visible — begins this morning in the Eastern Cape university town the festival has returned to every June since 1974. Venice is forty-seven days in. The Zeitz MOCAA succession is in its nineteenth month. Youth Day was nine days ago.</p>
+        <p class="edition-label">Latest Edition &nbsp;·&nbsp; 30 July 2026</p>
+        <h2>The Less Good Idea: On William Kentridge, Institutional Freedom, and What Twenty-Three Months of Silence Costs</h2>
+        <p class="standfirst">The Zeitz Museum of Contemporary Art Africa enters its twenty-third month without a named permanent director. Venice is eighty-two days into its run. In Maboneng, a different kind of institution — built deliberately not to look like one — continues a decade of work that never required a board to decide anything. This week asks what that difference teaches.</p>
         <div class="edition-links">
-          <a href="editions/25-june-2026.html" class="read-link">Read this edition &rarr;</a>
-          <a href="theculturalbriefsa25june2026.pdf" class="pdf-link" target="_blank">Download PDF &rarr;</a>
+          <a href="editions/30-july-2026.html" class="read-link">Read this edition &rarr;</a>
+          <a href="theculturalbriefsa30july2026.pdf" class="pdf-link" target="_blank">Download PDF &rarr;</a>
         </div>
       </div>
 
-      <!-- Archive — auto-generated, newest first -->
+      <!-- ── ARCHIVE WITH SEARCH + FILTER ── -->
       <p class="section-label" id="archive-heading">Archive</p>
 
       <div class="archive-controls" role="search" aria-labelledby="archive-heading">
@@ -160,6 +154,7 @@
           <button class="filter-tag"        data-filter="music"      type="button" aria-pressed="false">Music</button>
           <button class="filter-tag"        data-filter="literature" type="button" aria-pressed="false">Literature</button>
           <button class="filter-tag"        data-filter="language"   type="button" aria-pressed="false">Language</button>
+          <button class="filter-tag"        data-filter="film"       type="button" aria-pressed="false">Film</button>
         </div>
       </div>
 
@@ -168,228 +163,250 @@
       </p>
 
       <ul class="archive-list" id="archiveList" aria-label="Edition archive">
-        
+
         <li data-tags="arts policy">
-          <span class="archive-date">25 June 2026</span>
+          <span class="archive-date">30 July 2026</span>
           <div>
-            <a href="editions/25-june-2026.html" class="archive-title">What the Fringe Holds: On the National Arts Festival Opening, the Freedom That Comes Before Permission, and What 2026 Made</a>
+            <a href="editions/30-july-2026.html" class="archive-title">The Less Good Idea — On William Kentridge, Institutional Freedom, and What Twenty-Three Months of Silence Costs</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa25june2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 25 June 2026">PDF</a>
+          <a href="theculturalbriefsa30july2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 30 July 2026">PDF</a>
         </li>
-        
+
+        <li data-tags="arts policy film">
+          <span class="archive-date">23 July 2026</span>
+          <div>
+            <a href="editions/23-july-2026.html" class="archive-title">The Prism of Heritage — On the Durban International Film Festival at Forty-Seven, and What a New Director Inherits</a>
+            <div class="archive-tags" aria-hidden="true">
+              <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span><span class="archive-tag">Film</span>
+            </div>
+          </div>
+          <a href="theculturalbriefsa23july2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 23 July 2026">PDF</a>
+        </li>
+
+        <li data-tags="arts policy">
+          <span class="archive-date">17 July 2026</span>
+          <div>
+            <a href="editions/17-july-2026.html" class="archive-title">The Sixty-Seven Minutes and the Sixty-Seven Years — On Mandela Day and What Corporatised Service Forgets</a>
+            <div class="archive-tags" aria-hidden="true">
+              <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
+            </div>
+          </div>
+          <a href="theculturalbriefsa17july2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 17 July 2026">PDF</a>
+        </li>
+
+        <li data-tags="arts policy">
+          <span class="archive-date">9 July 2026</span>
+          <div>
+            <a href="editions/09-july-2026.html" class="archive-title">After Makhanda — On Touring Infrastructure, and What Happens to the Work When the Festival Ends</a>
+            <div class="archive-tags" aria-hidden="true">
+              <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
+            </div>
+          </div>
+          <a href="theculturalbriefsa09july2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 9 July 2026">PDF</a>
+        </li>
+
+        <li data-tags="arts policy">
+          <span class="archive-date">2 July 2026</span>
+          <div>
+            <a href="editions/02-july-2026.html" class="archive-title">What the Fringe Actually Held — On the National Arts Festival's Closing Days, and the Difference Between a Right and an Audience</a>
+            <div class="archive-tags" aria-hidden="true">
+              <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
+            </div>
+          </div>
+          <a href="theculturalbriefsa02july2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 2 July 2026">PDF</a>
+        </li>
+
+        <li data-tags="arts policy">
+          <span class="archive-date">25 June 2026</span>
+          <div>
+            <a href="editions/25-june-2026.html" class="archive-title">What the Fringe Holds — On the National Arts Festival Opening, the Freedom That Comes Before Permission, and What 2026 Made</a>
+            <div class="archive-tags" aria-hidden="true">
+              <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
+            </div>
+          </div>
+          <a href="theculturalbriefsa25june2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 25 June 2026">PDF</a>
+        </li>
+
         <li data-tags="arts music policy">
           <span class="archive-date">18 June 2026</span>
           <div>
-            <a href="editions/18-june-2026.html" class="archive-title">What Comes After: On Thandiswa Mazwai, the Living Tradition, and What the Cultural Sector Does on Wednesday</a>
+            <a href="editions/18-june-2026.html" class="archive-title">What Comes After — On Thandiswa Mazwai, the Living Tradition, and What the Cultural Sector Does on Wednesday</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Music</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa18june2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 18 June 2026">PDF</a>
+          <a href="theculturalbriefsa18june2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 18 June 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">11 June 2026</span>
           <div>
-            <a href="editions/11-june-2026.html" class="archive-title">What the Fifty Years Built: On the Anniversary That Arrives on Tuesday and the Institutions That Must Answer It</a>
+            <a href="editions/11-june-2026.html" class="archive-title">What the Fifty Years Built — On the Anniversary That Arrives on Tuesday and the Institutions That Must Answer It</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa11june2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 11 June 2026">PDF</a>
+          <a href="theculturalbriefsa11june2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 11 June 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">4 June 2026</span>
           <div>
-            <a href="editions/04-june-2026.html" class="archive-title">The Town and the Stage: On Makhanda, the Eastern Cape, and What Fifty-Two Years of Theatre in a Contested Place Has Made</a>
+            <a href="editions/04-june-2026.html" class="archive-title">The Town and the Stage — On Makhanda, the Eastern Cape, and What Fifty-Two Years of Theatre in a Contested Place Has Made</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa04june2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 4 June 2026">PDF</a>
+          <a href="theculturalbriefsa04june2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 4 June 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">28 May 2026</span>
           <div>
-            <a href="editions/28-may-2026.html" class="archive-title">The Consciousness and the Institution: On Youth Month, Steve Biko, and What It Means to Build from the Inside</a>
+            <a href="editions/28-may-2026.html" class="archive-title">The Consciousness and the Institution — On Youth Month, Steve Biko, and What It Means to Build from the Inside</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa28may2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 28 May 2026">PDF</a>
+          <a href="theculturalbriefsa28may2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 28 May 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">20 May 2026</span>
           <div>
-            <a href="editions/20-may-2026.html" class="archive-title">What Institutions Do With Silence: The Zeitz Board, the NAC, and the Governance Question That Will Not Age</a>
+            <a href="editions/20-may-2026.html" class="archive-title">What Institutions Do With Silence — The Zeitz Board, the NAC, and the Governance Question That Will Not Age</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa20may2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 20 May 2026">PDF</a>
+          <a href="theculturalbriefsa20may2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 20 May 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">14 May 2026</span>
           <div>
-            <a href="editions/14-may-2026.html" class="archive-title">After the Opening: On What the World Heard, and What the Zeitz Must Now Answer</a>
+            <a href="editions/14-may-2026.html" class="archive-title">After the Opening — On What the World Heard, and What the Zeitz Must Now Answer</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa14may2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 14 May 2026">PDF</a>
+          <a href="theculturalbriefsa14may2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 14 May 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy music">
           <span class="archive-date">6 May 2026</span>
           <div>
-            <a href="editions/06-may-2026.html" class="archive-title">The Music, Now That It Is Playing: On What "In Minor Keys" Shows South Africa About Itself</a>
+            <a href="editions/06-may-2026.html" class="archive-title">The Music, Now That It Is Playing — On What "In Minor Keys" Shows South Africa About Itself</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span><span class="archive-tag">Music</span>
             </div>
           </div>
-          <a href="theculturalbriefsa06may2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 6 May 2026">PDF</a>
+          <a href="theculturalbriefsa06may2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 6 May 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts literature">
           <span class="archive-date">30 April 2026</span>
           <div>
-            <a href="editions/30-april-2026.html" class="archive-title">What the Record Shows: The Franschhoek Literary Festival, the Archive, and What South African Literature Does With the Country It Comes From</a>
+            <a href="editions/30-april-2026.html" class="archive-title">What the Record Shows — The Franschhoek Literary Festival, the Archive, and What South African Literature Does With the Country It Comes From</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Literature</span>
             </div>
           </div>
-          <a href="theculturalbriefsa30april2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 30 April 2026">PDF</a>
+          <a href="theculturalbriefsa30april2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 30 April 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">23 April 2026</span>
           <div>
-            <a href="editions/23-april-2026.html" class="archive-title">The Ground and What It Holds: AfrikaBurn, the Tankwa Karoo, and the Question of Who Belongs in a Landscape</a>
+            <a href="editions/23-april-2026.html" class="archive-title">The Ground and What It Holds — AfrikaBurn, the Tankwa Karoo, and the Question of Who Belongs in a Landscape</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa23april2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 23 April 2026">PDF</a>
+          <a href="theculturalbriefsa23april2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 23 April 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">16 April 2026</span>
           <div>
-            <a href="editions/16-april-2026.html" class="archive-title">The Day Before Freedom: What a Public Holiday Demands of the Country That Made It</a>
+            <a href="editions/16-april-2026.html" class="archive-title">The Day Before Freedom — What a Public Holiday Demands of the Country That Made It</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa16april2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 16 April 2026">PDF</a>
+          <a href="theculturalbriefsa16april2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 16 April 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">8 April 2026</span>
           <div>
-            <a href="editions/08-april-2026.html" class="archive-title">The City as Canvas: Public Space, Light, and the Question of Who the Street Belongs To</a>
+            <a href="editions/08-april-2026.html" class="archive-title">The City as Canvas — Public Space, Light, and the Question of Who the Street Belongs To</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa08april2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 8 April 2026">PDF</a>
+          <a href="theculturalbriefsa08april2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 8 April 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">2 April 2026</span>
           <div>
-            <a href="editions/02-april-2026.html" class="archive-title">In Minor Keys: Koyo Kouoh's Unfinished Biennale, and What South Africa Does With the Gift</a>
+            <a href="editions/02-april-2026.html" class="archive-title">In Minor Keys — Koyo Kouoh's Unfinished Biennale, and What South Africa Does With the Gift</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa02april2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 2 April 2026">PDF</a>
+          <a href="theculturalbriefsa02april2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 2 April 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts language">
           <span class="archive-date">26 March 2026</span>
           <div>
-            <a href="editions/26-march-2026.html" class="archive-title">The Festival and the Language: What the KKNK Owes the Afrikaans It Was Built On</a>
+            <a href="editions/26-march-2026.html" class="archive-title">The Festival and the Language — What the KKNK Owes the Afrikaans It Was Built On</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Language</span>
             </div>
           </div>
-          <a href="theculturalbriefsa26march2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 26 March 2026">PDF</a>
+          <a href="theculturalbriefsa26march2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 26 March 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">19 March 2026</span>
           <div>
-            <a href="editions/19-march-2026.html" class="archive-title">The Bill of Rights at Thirty: What the Constitution Promised South African Cultural Life, and What We Have</a>
+            <a href="editions/19-march-2026.html" class="archive-title">The Bill of Rights at Thirty — What the Constitution Promised South African Cultural Life, and What We Have</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa19march2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 19 March 2026">PDF</a>
+          <a href="theculturalbriefsa19march2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 19 March 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts music">
           <span class="archive-date">12 March 2026</span>
           <div>
-            <a href="editions/12-march-2026.html" class="archive-title">Sound as Inheritance: Nduduzo Makhathini and the Cosmological Jazz</a>
+            <a href="editions/12-march-2026.html" class="archive-title">Sound as Inheritance — Nduduzo Makhathini and the Cosmological Jazz</a>
             <div class="archive-tags" aria-hidden="true">
-              <span class="archive-tag">Arts</span><span class="archive-tag">Music</span>
+              <span class="archive-tag">Music</span><span class="archive-tag">Arts</span>
             </div>
           </div>
-          <a href="theculturalbriefsa12march2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 12 March 2026">PDF</a>
+          <a href="theculturalbriefsa12march2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 12 March 2026">PDF</a>
         </li>
-        
+
         <li data-tags="arts policy">
           <span class="archive-date">5 March 2026</span>
           <div>
-            <a href="editions/05-march-2026.html" class="archive-title">The Empty Room: On the Goliath Affair and the State's Idea of South Africa</a>
+            <a href="editions/05-march-2026.html" class="archive-title">The Empty Room — On the Goliath Affair and the State's Idea of South Africa</a>
             <div class="archive-tags" aria-hidden="true">
               <span class="archive-tag">Arts</span><span class="archive-tag">Policy</span>
             </div>
           </div>
-          <a href="theculturalbriefsa05march2026.pdf"
-             class="archive-pdf" target="_blank"
-             aria-label="Download PDF, 5 March 2026">PDF</a>
+          <a href="theculturalbriefsa05march2026.pdf" class="archive-pdf" target="_blank" aria-label="Download PDF, 5 March 2026">PDF</a>
         </li>
-        
+
+        <!-- ADD NEW EDITIONS ABOVE THIS LINE -->
       </ul>
 
       <div class="about-strip">
